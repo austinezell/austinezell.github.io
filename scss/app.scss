@@ -1,4 +1,5 @@
 @import "settings";
+$topbar-bg-color: $base;
 @import "foundation";
 
 // Or selectively include components
@@ -51,8 +52,6 @@ body {
   height: 75%;
   min-height: 500px;
   max-height: 900px;
-
-  // background-color : transparent;
   margin-bottom: 0;
 }
 .introDisplay {
@@ -67,9 +66,6 @@ body {
   height: 100%;
 }
 
-// .spacer{
-//   height: 25%
-// }
 .name {
   position: fixed;
   color: $ghost;
@@ -89,7 +85,7 @@ body {
   height: 40%;
   min-height: 400px;
   div {
-    background: $ghost;
+    background-color: rgb(31, 74, 110);
   }
   .about-me {
     width: 100%;
@@ -107,6 +103,7 @@ body {
 img.technology-logos {
   display: inline-block;
   width: 150px;
+  margin: 4px;
   height: auto;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -121,6 +118,12 @@ img.technology-logos:hover {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
+.space-filler {
+  height: 40%;
+  min-height: 500px;
+}
+
 @-webkit-keyframes zoomIn {
   from {
     opacity: 0;
