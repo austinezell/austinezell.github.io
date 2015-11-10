@@ -1,0 +1,147 @@
+@import "settings";
+@import "foundation";
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+body {
+  font-family: "Lucida Console", Lucida, monospace;
+  min-width: 261px;
+}
+.technologies {
+  height: 40%;
+  min-height: 450px;
+}
+.intro {
+  width: 100%;
+  height: 75%;
+  min-height: 500px;
+  max-height: 900px;
+
+  // background-color : transparent;
+  margin-bottom: 0;
+}
+.introDisplay {
+  z-index: -11;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  background-image: url("../images/backgroundTest2.1.jpg");
+  background-size: cover;
+}
+.holderDiv {
+  height: 100%;
+}
+
+// .spacer{
+//   height: 25%
+// }
+.name {
+  position: fixed;
+  color: $ghost;
+  right: 0;
+  font-size: 65px;
+  z-index: -1;
+  p {
+    color: $ghost;
+    font-size: 25px;
+  }
+}
+.portfolio {
+  margin-top: 50px;
+}
+.technologies {
+  width: 100%;
+  height: 40%;
+  min-height: 400px;
+  div {
+    background: $ghost;
+  }
+  .about-me {
+    width: 100%;
+    height: 100%;
+  }
+  .padding {
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 15%;
+  }
+}
+img.technology-logos {
+  display: inline-block;
+  width: 150px;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+img.technology-logos:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(0%);
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
