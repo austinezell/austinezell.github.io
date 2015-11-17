@@ -1,6 +1,21 @@
 {
-  "name": "foundation-libsass-template",
+  "name": "website",
+  "description": "",
+  "main": "",
+  "authors": [
+    "austin ezell <austin.r.ezell@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/austinezell/personalWebsite",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "jquery": "~2.1.4"
   }
 }
