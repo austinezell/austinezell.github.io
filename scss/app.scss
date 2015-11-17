@@ -1,47 +1,8 @@
-@import "settings";
-$topbar-bg-color: $base;
-@import "foundation";
-
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switches",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
 body {
   font-family: "Lucida Console", Lucida, monospace;
   min-width: 261px;
+  // background-image: url("../images/backgroundTest3.jpg");
+  // background-size: contain;
 }
 .intro {
   width: 100%;
@@ -49,12 +10,8 @@ body {
   min-height: 500px;
   max-height: 900px;
   margin-bottom: 0;
-}
-.introDisplay {
-  z-index: -11;
-  height: 100%;
-  position: fixed;
-  width: 100%;
+  position: relative;
+  z-index: -2;
   background-image: url("../images/backgroundTest3.jpg");
   background-size: cover;
 }
@@ -64,34 +21,20 @@ body {
 
 .name {
   position: fixed;
-  color: $ghost;
+  color: ghostwhite;
   right: 0;
   font-size: 65px;
   z-index: -1;
   p {
-    color: $ghost;
+    color: ghostwhite;
     font-size: 25px;
   }
 }
-.portfolio {
-  margin-top: 50px;
-}
-
 .technologies {
   width: 100%;
   height: 40%;
   min-height: 400px;
-  div {
-    background-color: rgb(31, 74, 110);
-  }
-  .padder {
-    width: 100%;
-    height: 100%;
-    padding-top: 5%;
-    padding-right: 10%;
-    padding-left: 10%;
-    padding-bottom: 5%;
-  }
+  background-color: rgb(31, 74, 110);
 }
 img.technology-logos {
   display: inline-block;
@@ -112,17 +55,10 @@ img.technology-logos:hover {
   animation-fill-mode: both;
 }
 
-.portfolio {
-  background-color: $base;
+#portfolio {
+  background-color: grey;
   text-align: center;
-}
-
-.portfolioItem {
-  display: inline-block;
-  border: 3px solid $monsoon;
-  width: 240px;
-  height: 240px;
-  background-color: ghostwhite;
+  margin: 0 auto;
 }
 
 .space-filler {
@@ -153,4 +89,9 @@ img.technology-logos:hover {
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
+}
+
+.card .card-image .card-title{
+  color: black;
+  margin: 0px;
 }

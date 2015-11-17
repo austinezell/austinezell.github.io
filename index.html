@@ -5,7 +5,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Austin Ezell | Fullstack Developer</title>
-  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/css/materialize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css"/>
 
 </head>
 <body>
@@ -55,136 +57,67 @@
 
   <section class="space-filler">
 
-    <ul class="accordion" data-accordion>
-      <li class="accordion-navigation">
-        <a href="#panel1a">Accordion 1</a>
-        <div id="panel1a" class="content">
-          Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </li>
-      <li class="accordion-navigation">
-        <a href="#panel2a">Accordion 2</a>
-        <div id="panel2a" class="content">
-          Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </li>
-      <li class="accordion-navigation">
-        <a href="#panel3a">Accordion 3</a>
-        <div id="panel3a" class="content">
-          Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </li>
-    </ul>
-
   </section>
 
-  <section class='portfolio'>
-    <ul class="accordion" data-accordion>
-      <li class="accordion-navigation portfolioItem">
-        <div align='center'>
-          <a href="#calculator">
-            <img class='portofolioImage' src="images/portfolio/calculator.png"/>
-          </a>
-          <div id="calculator" class="content">
-            <a href="http://austinezell.github.io/calculator/">
-              View on Github
-            </a>
-          </div>
-        </li>
-        <li class="accordion-navigation portfolioItem">
-          <div class='portfolioItem' align='center'>
-            <a href="#calculator1">
-              <img class='portofolioImage' src="images/portfolio/calculator.png"/>
-            </a>
-          </div>
-          <div id="calculator1" class="content">
-            <a href="http://austinezell.github.io/calculator/">
-              View on Github
-            </a>
-          </div>
-        </li>
-        <li class="accordion-navigation portfolioItem">
-          <div class='portfolioItem' align='center'>
-            <a href="#calculator2">
-              <img class='portofolioImage' src="images/portfolio/calculator.png"/>
-            </a>
-          </div>
-          <div id="calculator2" class="content">
-            <a href="http://austinezell.github.io/calculator/">
-              View on Github
-            </a>
-          </div>
-        </li>
-        <li class="accordion-navigation portfolioItem">
-          <div class='portfolioItem' align='center'>
-            <a href="#calculator3">
-              <img class='portofolioImage' src="images/portfolio/calculator.png"/>
-            </a>
-          </div>
-          <div id="calculator3" class="content">
-            <a href="http://austinezell.github.io/calculator/">
-              View on Github
-            </a>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/portfolio/calculatorlg.png">
+            </div>
+            <div class="card-content">
+              <p>JavaScript Calculator</p>
+              <a href="http://austinezell.github.io/calculator/">View on GitHub pages</a>
+            </div>
           </div>
         </div>
-      </li>
-      <!-- <div class='portfolioItem' align='center'>
-      <a href="http://austinezell.github.io/tictacmofo"><img src="images/portfolio/tictactoAlpha.png" alt=""></a>
-      <hr/>
-      <h4>Tic Tac Toe Game</h4>
-      <p>Built with jQuery. Designed with Foundation</p>
-    </div> -->
-    <!-- <div class='portfolioItem' align='center'>
-    <a><img src="images/portfolio/stocks.png" alt=""></a>
-    <hr/>
-    <h4>Stock Tracker</h4>
-    <p>Look up stock values and their daily changes. Built with Angular, utilizes localStorage for tracked stocks.</p>
-  </div> -->
-</ul>
-</section>
 
-<div class="medium-12 columns">
-  <div class="medium-6 columns contactInfo">
-    <h2></h2>
-    <p>email: austin.r.ezell@gmail.com</p>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/portfolio/tictactoe.png">
+            </div>
+            <div class="card-content">
+              <p>jQuery based tic-tac-toe.</p>
+              <a href="http://austinezell.github.io/tictacmofo/">View on GitHub pages</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+          <div class="card">
+            <div class="card-image">
+              <img src="images/portfolio/stockwatcher.png">
+            </div>
+            <div class="card-content">
+              <p>Stock Tracker</p>
+              <a href="http://austinezell.github.io/stockWatcher/">View on GitHub pages</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="col-md-12 ">
+    <div class="col-md-6  contactInfo">
+      <h2></h2>
+      <p>email: austin.r.ezell@gmail.com</p>
+    </div>
+    <div class="col-md-6 ">
+      <h2>Something flashy. </h2>
+      <img src="http://www.placehold.it/300x500" alt="">
+    </div>
   </div>
-  <div class="medium-6 columns">
-    <h2>Something flashy. </h2>
-    <img src="http://www.placehold.it/300x500" alt="">
-  </div>
-</div>
 
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation.min.js"></script>
-<script src="js/app.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-
-
-<!-- <ul class='small-block-grid-6'>
-<div class='portfolioItem' align='center'>
-<a href="http://austinezell.github.io/calculator/">
-<img class='portofolioImage' src="images/portfolio/calculator.png"/>
-</a>
-<hr/>
-<h4>Simple JavaScript Calculator</h4>
-<p>Built with jQuery. Designed with Foundation</p>
-</li>
-<li class='portfolioItem' align='center'>
-<a href="http://austinezell.github.io/tictacmofo"><img src="images/portfolio/tictactoAlpha.png" alt=""></a>
-<hr/>
-<h4>Tic Tac Toe Game</h4>
-<p>Built with jQuery. Designed with Foundation</p>
-</li>
-<li class='portfolioItem' align='center'>
-<a><img src="images/portfolio/stocks.png" alt=""></a>
-<hr/>
-<h4>Stock Tracker</h4>
-<p>Look up stock values and their daily changes. Built with Angular, utilizes localStorage for tracked stocks.</p>
-</li>
-</ul> -->
-
-<div class="columns medium-12 portfolio" data-equalizer>
-
-</div>
