@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "devDependencies": {
     "node-sass": "~2.0.1",
     "grunt": "~0.4.5",
