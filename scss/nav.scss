@@ -1,0 +1,19 @@
+nav.navbar {
+  margin-bottom: 0px;
+  min-height: 64px;
+  // background-color: 
+  ul.navbar-nav{
+    display: table;
+    height: 100%;
+    li {
+      display: table-cell;
+      vertical-align: middle;
+      a {
+        color: white;
+      }
+      a:hover {
+        color: skyblue;
+      }
+    }
+  }
+}

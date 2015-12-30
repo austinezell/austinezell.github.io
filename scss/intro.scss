@@ -4,7 +4,7 @@
   min-height: 500px;
   max-height: 900px;
   background-image: url("../images/backgroundTest3.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: table;
@@ -25,4 +25,29 @@
       }
     }
   }
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
 }
