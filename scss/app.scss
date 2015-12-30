@@ -1,15 +1,12 @@
-@import "./materializeCard";
+@import "./materializeCard",
+"./intro";
 
 body {
   font-family: "Lucida Console", Lucida, monospace;
   min-width: 261px;
-  background-color: darkgrey;
+  // background-color: darkgrey;
   margin-top: 64px;
-}
-
-
-#navBar {
-  height: 100%;
+  // background-image: url("../images/backgroundTest3.jpg");
 }
 
 nav.navbar {
@@ -21,51 +18,26 @@ nav.navbar {
     li {
       display: table-cell;
       vertical-align: middle;
+      a {
+        color: white;
+      }
+      a:hover {
+        color: skyblue;
+      }
     }
   }
-  a {
-    color: white;
-  }
-  a:hover {
-    color: skyblue;
-  }
 }
 
-.table-display  {
-  width: 100%;
-  height: 100%;
-  display: table;
-  .vertical-center{
-    display: table-cell;
-    vertical-align: center;
-  }
-}
+// .table-display  {
+//   height: 100%;
+//   display: table;
+//   .vertical-center{
+//     display: table-cell;
+//     vertical-align: center;
+//   }
+// }
 
-.intro {
-  width: 100%;
-  height: 75%;
-  min-height: 500px;
-  max-height: 900px;
-  background-image: url("../images/backgroundTest3.jpg");
-  background-size: cover;
-}
-.holderDiv {
-  height: 100%;
-}
 
-.introDisplay {
-  background-color: rgba(0, 0, 0, 0.2 );
-  width: 100%;
-  height: 100%;
-}
-
-.name {
-  color: ghostwhite;
-  font-size: 65px;
-  p {
-    font-size: 25px;
-  }
-}
 
 
 #technologies {
@@ -136,7 +108,7 @@ img.technology-logos:hover {
 
 
 section{
-  background-color:ghostwhite;
+  // background-color:ghostwhite;
   padding-bottom: 7%;
   padding-top: 7%;
 }
@@ -156,9 +128,9 @@ label {
   font-size: 28px;
 }
 
-div.container-fluid {
-  height: 100%;
-}
+// div.container-fluid {
+//   height: 100%;
+// }
 
 .card-image {
   margin: 0 auto;

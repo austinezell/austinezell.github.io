@@ -5,7 +5,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Austin Ezell | Fullstack Developer</title>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/app.css"/>
 </head>
@@ -34,15 +33,12 @@
     </div>
   </nav>
 
-  <section class='intro'>
-    <div class="introDisplay">
-      <div class="table-display">
-
-        <div class="name vertical-center animated zoomIn">
+  <section id='intro' align="center">
+    <div>
+        <span>
           Austin Reed Ezell
           <p>JavaScript Developer;</p>
-        </div>
-      </div>
+        </span>
     </div>
   </section>
 
@@ -129,19 +125,19 @@
 
   <section id='get-in-touch'>
     <div class="container" align='center'>
-      <h1>Drop me a line!</h1>
-      <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+      <h1>Drop me a line!</h1><hr>
+      <div class="col-xs-10 col-xs-offset-1">
         <form action="https://getsimpleform.com/messages?form_api_token=02f9ef3aab61a87489bb782f0a16905d" method="post">
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">Name</label><br>
             <input type="text" name="name" required="required" placeholder="Full Name">
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email</label><br>
             <input type="text" email="email" placeholder="Email to reply">
           </div>
           <div class="form-group">
-            <label for="email">Message Body</label>
+            <label for="email">Message Body</label><br>
 
             <textarea id='message' name="message" cols="30" rows="20" placeholder="Message body">
             </textarea>

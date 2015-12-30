@@ -1,0 +1,28 @@
+#intro {
+  width: 100%;
+  height: 85%;
+  min-height: 500px;
+  max-height: 900px;
+  background-image: url("../images/backgroundTest3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: table;
+  padding: 0px;
+  div {
+    background-color: rgba(0, 0, 0, 0.2 );
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    display: table;
+    span {
+      display: table-cell;
+      vertical-align: middle;
+      color: ghostwhite;
+      font-size: 65px;
+      p {
+        font-size: 25px;
+      }
+    }
+  }
+}
