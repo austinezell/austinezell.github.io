@@ -20,24 +20,25 @@
     margin-left: 15px;
     left: -15px;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     opacity: 0;
-    -webkit-transition: opacity 800ms;
-    -moz-transition: opacity 800ms;
-    -o-transition: opacity 800ms;
-    transition: opacity 800ms;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
     .vertical-align{
       display: table;
       height: 100%;
-      width: 100%;
       span {
         display: table-cell;
-        vertical-align: center;
+        vertical-align: middle;
+        a {
+          color: rgb(69, 165, 185);
+        }
+        a:hover {
+          color: rgb(59, 105, 125);
+        }
       }
-    }
-    span {
-      display: table-cell;
-      vertical-align: middle;
     }
   }
   .hover:hover {
