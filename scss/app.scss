@@ -8,35 +8,36 @@ body {
   font-size: 4em;
 }
 
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+section{
+  text-align: center;
+  padding-bottom: 7%;
+  padding-top: 7%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.horizontal-line {
+  width: 100%;
+  margin-top: .6em;
+  margin-bottom: .6em;
+}
+
 
 @import "./materializeCard",
 "./intro",
 "./nav",
 "./technologies",
-"./aboutMe";
+"./aboutMe",
+"./portfolio";
 
 
-#portfolio {
-  background-color:  rgb(51, 51, 50);
-  text-align: center;
-  margin: 0 auto;
-}
-
-// .navbar-image {
-//   filter: invert(100%);
-//   -webkit-filter: invert(100%);
-// }
-
-
-
-section{
-  padding-bottom: 7%;
-  padding-top: 7%;
-}
-.form-group {
-  text-align: center;
-  margin: 0 auto;
-}
 
 #get-in-touch {
   align-content: center;
@@ -47,12 +48,4 @@ section{
 
 label {
   font-size: 28px;
-}
-
-// div.container-fluid {
-//   height: 100%;
-// }
-
-.card-image {
-  margin: 0 auto;
 }

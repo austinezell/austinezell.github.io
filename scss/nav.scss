@@ -1,13 +1,18 @@
 nav.navbar {
   margin-bottom: 0px;
   min-height: 64px;
-  // background-color: 
+  background-color: rgb(38, 38, 38);
+  .navbar-image {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+  }
+  .navbar-image:hover {
+    filter: invert(0%);
+    -webkit-filter: invert(0%);
+  }
   ul.navbar-nav{
-    display: table;
     height: 100%;
     li {
-      display: table-cell;
-      vertical-align: middle;
       a {
         color: white;
       }
