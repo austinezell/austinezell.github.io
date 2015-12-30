@@ -2,7 +2,15 @@ body {
   font-family: "Lucida Console", Lucida, monospace;
   min-width: 261px;
   margin-top: 64px;
+  background: url('backgroundTest3.jpg') no-repeat center center fixed;
+  background-image: url("../images/backgroundTest3.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
+
 
 .title {
   font-size: 4em;
@@ -41,8 +49,13 @@ section{
 
 #get-in-touch {
   align-content: center;
+  background-color: whitesmoke;
   input, textarea {
     text-align: center;
+  }
+  .email {
+    border: 1px solid black;
+    border-radius: 15px;
   }
 }
 
