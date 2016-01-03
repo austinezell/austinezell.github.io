@@ -13,7 +13,7 @@
 
   <nav id="myNavBar" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+      <button type="button" id="navButton" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -37,13 +37,17 @@
   <section id='intro' align="center">
     <div>
       <span class="animated zoomIn">
-        Austin Reed Ezell
-        <p>JavaScript Developer;</p>
+        <span class="name">
+          Austin Reed Ezell
+          <p>JavaScript Developer;</p>
+        </span>
       </span>
     </div>
   </section>
 
-
+  <div class="tech-triangle-container">
+    <span class="left"></span><span class="down-triangle"></span><span class="right"></span>
+  </div>
   <section id='technologies'>
     <div class="title">
       Technologies
@@ -51,13 +55,15 @@
     <div class="horizontal-line"></div>
     <div>
       <img src="./images/techs/es6.png" alt="" class="technology-logos">
-      <img src="./images/techs/git-logo.jpg" alt="" class="technology-logos">
-      <img src="./images/techs/html-css.png" alt="" class="technology-logos">
-      <img src="./images/techs/angular-logo.png" alt="" class="technology-logos">
-      <img src="./images/techs/mongodb.png" alt="" class="technology-logos">
-      <img src="./images/techs/nodejs-logo.png" alt="" class="technology-logos">
       <img src="./images/techs/express.png" alt="" class="technology-logos">
+      <img src="./images/techs/html-css.png" alt="" class="technology-logos">
+      <img src="./images/techs/git-logo.jpg" alt="" class="technology-logos">
+      <img src="./images/techs/nodejs-logo.png" alt="" class="technology-logos">
+      <img src="./images/techs/angular.png" alt="" class="technology-logos">
+      <img src="./images/techs/mongodb.png" alt="" class="technology-logos">
       <img src="./images/techs/react.jpg" alt="" class="technology-logos">
+      <img src="./images/techs/jquery.png" alt="" class="technology-logos">
+      <img src="./images/techs/firebase.jpg" alt="" class="technology-logos">
     </div>
   </section>
 
@@ -72,219 +78,214 @@
       </div>
       <div class="horizontal-line"></div>
       <span class="vertical-center">
-        Fullstack JavaScript developer who loves to
-        connect with the world through the technologies
-        I utilize. I excel at learning quickly in
-        fast-paced environments. I enjoy working on
-        large-scale and small-scale projects and finding
-        clever implementations of the languages and
-        frameworks I know, as well as learning new ones.
-      </span>
+        Full-stack JavaScript developer who loves to connect with the world by building comprehensive
+        technologies. Excels at learning quickly in fast-paced environments and enjoys finding clever
+        implementations of languages and frameworks to solve complex problems.      </span>
+      </div>
+    </section>
+
+    <div class="triangle-container-two" align="center">
+      <div class="up-triangle"></div>
     </div>
-  </section>
 
-  <div class="triangle-container-two" align="center">
-    <div class="up-triangle"></div>
-  </div>
+    <section id="portfolio">
+      <div class="title">
+        Portfolio
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="row" align="center">
 
-  <section id="portfolio">
-    <div class="title">
-      Portfolio
-    </div>
-    <div class="horizontal-line"></div>
-    <div class="row" align="center">
-
-      <div class="col-xs-12  col-sm-6 col-md-6 col-lg-4">
-        <div class="hover col-xs-12">
-          <div class="vertical-align">
-            <span>
-              <h2>Landmarks</h2>
-              Mobile App to track and visit California Historic Landmarks<br>
-              Fullstack MEAN app utilizing Ionic and Cordova to convert into mobile.<br>
-              <div class="horizontal-line"></div>
-              <a target="_blank" href="https://california-landmarks.herokuapp.com/#/app/landing">Demo on Heroku</a><br>
-              (use devtools mobile emulator for best result)
-              <hr>
-              <a target="_blank" href="http://github.com/austinezell/landmarksApp/">View source </a>
-            </span>
+        <div class="col-xs-12  col-sm-6 col-md-6 col-lg-4">
+          <div class="hover col-xs-12">
+            <div class="vertical-align">
+              <span>
+                <h2>Landmarks</h2>
+                Mobile App to track and visit California Historic Landmarks<br>
+                Fullstack MEAN app utilizing Ionic and Cordova to convert into mobile.<br>
+                <div class="horizontal-line"></div>
+                <a target="_blank" href="https://california-landmarks.herokuapp.com/#/app/landing">Demo on Heroku</a><br>
+                (use devtools mobile emulator for best result)
+                <hr>
+                <a target="_blank" href="http://github.com/austinezell/landmarksApp/">View source </a>
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img class="portfolio-image" src="images/portfolio/landmarks.png">
+            </div>
+            <div class="card-content">
+              <p>Landmarks</p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-image">
-            <img class="portfolio-image" src="images/portfolio/landmarks.png">
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="hover col-xs-12">
+            <div class="vertical-align">
+              <span>
+                <h2>Stock Tracker</h2>
+
+                Application to keep track of stocks.<br>
+                Built with Angular. Utilizes localstorage for persistence.<br>
+                <div class="horizontal-line"></div>
+                <a target="_blank" href="http://austinezell.github.io/stockWatcher/">Demo on GitHub pages</a>
+                <hr>
+                <a target="_blank" href="http://github.com/austinezell/stockWatcher/">View source </a>
+              </span>
+            </div>
           </div>
-          <div class="card-content">
-            <p>Landmarks</p>
+          <div class="card">
+            <div class="card-image">
+              <img class="portfolio-image" src="images/portfolio/stockwatchertest.png">
+            </div>
+            <div class="card-content">
+              <p>Stock Tracker</p>
+            </div>
           </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="hover col-xs-12">
+            <div class="vertical-align">
+              <span>
+                <h2>BattleShips</h2>
+                Remake of Hasboro's classic game. Multiplayer capable.<br>
+                Built with jQuery and Firebase.<br>
+                <div class="horizontal-line"></div>
+                <a target="_blank" href="http://nchlswtsn.github.io/battleship-2015/">Demo on GitHub pages</a>
+                <hr>
+                <a target="_blank" href="http://github.com/nchlswtsn/battleship-2015/">View source </a>
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img class="portfolio-image" src="images/portfolio/battleship.png">
+            </div>
+            <div class="card-content">
+              <p>Battle Ships</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="hover col-xs-12">
+            <div class="vertical-align">
+              <span>
+                <h2>BattleShips</h2>
+                Remake of Hasboro's classic game. Multiplayer capable.<br>
+                Built with jQuery and Firebase.<br>
+                <a target="_blank" href="http://nchlswtsn.github.io/battleship-2015/">Demo on GitHub pages</a>
+                <div class="horizontal-line"></div>
+                <a target="_blank" href="http://github.com/nchlswtsn/battleship-2015/">View source </a>
+              </span>
+            </div>
+          </div>
+          <div class="hover col-xs-12">
+            <div class="vertical-align">
+              <span>
+                <h2>Weather App</h2>
+                Weather app using Wunderground API. <br>
+                Built with React/Flux.<br>
+                <div class="horizontal-line"></div>
+                <a target="_blank" href="http://austinezell.github.io/weatherapp2/">Live Demo on GitHub pages</a><br>
+                <hr>
+                <a target="_blank" href="http://github.com/austinezell/weatherapp2/">View source </a>
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img class="portfolio-image" src="images/portfolio/weatherapp.jpg">
+            </div>
+            <div class="card-content">
+              <p>Weather App</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="hover col-xs-12">
+            <div class="vertical-align">
+              <span>
+                <h2>Calculator</h2>
+
+                Built with jQuery.<br>
+                <div class="horizontal-line"></div>
+                <a target="_blank" href="http://austinezell.github.io/calculator/">Demo on GitHub pages</a>
+                <hr>
+                <a target="_blank" href="http://github.com/austinezell/calculator/">View source</a>
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img class="portfolio-image" src="images/portfolio/math.jpg">
+            </div>
+            <div class="card-content">
+              <p>Calculator</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="hover col-xs-12">
+            <div class="vertical-align">
+              <span>
+                <h2>TicTacToe</h2>
+
+                Built with jQuery.<br>
+                <div class="horizontal-line"></div>
+                <a target="_blank" href="http://austinezell.github.io/tictacmofo/">Demo on GitHub pages</a>
+                <hr>
+                <a target="_blank" href="http://github.com/austinezell/tictacmofo/">View source </a>
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img class="portfolio-image" src="images/portfolio/tictactoetest.png">
+            </div>
+            <div class="card-content">
+              <p>tic-tac-toe.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id='get-in-touch'>
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 email">
+          <h1>Drop me a line!</h1><hr>
+          <form action="https://getsimpleform.com/messages?form_api_token=02f9ef3aab61a87489bb782f0a16905d" method="post">
+            <div class="form-group">
+              <label for="name">Name</label><br>
+              <input type="text" name="name" required="required" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label><br>
+              <input type="text" email="email" placeholder="Email to reply">
+            </div>
+            <div class="form-group">
+              <label for="email">Message Body</label><br>
+
+              <textarea id='message' name="message" cols="30" rows="10" placeholder="Message body">
+              </textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit"  class="btn btn-primary"><img src="images/message.png" alt=""></button>
+            </div>
+          </form>
         </div>
       </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="hover col-xs-12">
-          <div class="vertical-align">
-            <span>
-              <h2>Stock Tracker</h2>
-
-              Application to keep track of stocks.<br>
-              Built with Angular. Utilizes localstorage for persistence.<br>
-              <div class="horizontal-line"></div>
-              <a target="_blank" href="http://austinezell.github.io/stockWatcher/">Demo on GitHub pages</a>
-              <hr>
-              <a target="_blank" href="http://github.com/austinezell/stockWatcher/">View source </a>
-            </span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img class="portfolio-image" src="images/portfolio/stockwatchertest.png">
-          </div>
-          <div class="card-content">
-            <p>Stock Tracker</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="hover col-xs-12">
-          <div class="vertical-align">
-            <span>
-              <h2>BattleShips</h2>
-              Remake of Hasboro's classic game. Multiplayer capable.<br>
-              Built with jQuery and Firebase.<br>
-              <div class="horizontal-line"></div>
-              <a target="_blank" href="http://nchlswtsn.github.io/battleship-2015/">Demo on GitHub pages</a>
-              <hr>
-              <a target="_blank" href="http://github.com/nchlswtsn/battleship-2015/">View source </a>
-            </span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img class="portfolio-image" src="images/portfolio/battleship.png">
-          </div>
-          <div class="card-content">
-            <p>Battle Ships</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="hover col-xs-12">
-          <div class="vertical-align">
-            <span>
-              <h2>BattleShips</h2>
-              Remake of Hasboro's classic game. Multiplayer capable.<br>
-              Built with jQuery and Firebase.<br>
-              <a target="_blank" href="http://nchlswtsn.github.io/battleship-2015/">Demo on GitHub pages</a>
-              <div class="horizontal-line"></div>
-              <a target="_blank" href="http://github.com/nchlswtsn/battleship-2015/">View source </a>
-            </span>
-          </div>
-        </div>
-        <div class="hover col-xs-12">
-          <div class="vertical-align">
-            <span>
-              <h2>Weather App</h2>
-              Weather app using Wunderground API. <br>
-              Built with React/Flux.<br>
-              <div class="horizontal-line"></div>
-              <a target="_blank" href="http://austinezell.github.io/weatherapp2/">Live Demo on GitHub pages</a><br>
-              <hr>
-              <a target="_blank" href="http://github.com/austinezell/weatherapp2/">View source </a>
-            </span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img class="portfolio-image" src="images/portfolio/weatherapp.jpg">
-          </div>
-          <div class="card-content">
-            <p>Weather App</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="hover col-xs-12">
-          <div class="vertical-align">
-            <span>
-              <h2>Calculator</h2>
-
-              Built with jQuery.<br>
-              <div class="horizontal-line"></div>
-              <a target="_blank" href="http://austinezell.github.io/calculator/">Demo on GitHub pages</a>
-              <hr>
-              <a target="_blank" href="http://github.com/austinezell/calculator/">View source</a>
-            </span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img class="portfolio-image" src="images/portfolio/math.jpg">
-          </div>
-          <div class="card-content">
-            <p>Calculator</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="hover col-xs-12">
-          <div class="vertical-align">
-            <span>
-              <h2>TicTacToe</h2>
-
-              Built with jQuery.<br>
-              <div class="horizontal-line"></div>
-              <a target="_blank" href="http://austinezell.github.io/tictacmofo/">Demo on GitHub pages</a>
-              <hr>
-              <a target="_blank" href="http://github.com/austinezell/tictacmofo/">View source </a>
-            </span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <img class="portfolio-image" src="images/portfolio/tictactoetest.png">
-          </div>
-          <div class="card-content">
-            <p>tic-tac-toe.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id='get-in-touch'>
-    <div class="row">
-      <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 email">
-        <h1>Drop me a line!</h1><hr>
-        <form action="https://getsimpleform.com/messages?form_api_token=02f9ef3aab61a87489bb782f0a16905d" method="post">
-          <div class="form-group">
-            <label for="name">Name</label><br>
-            <input type="text" name="name" required="required" placeholder="Full Name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label><br>
-            <input type="text" email="email" placeholder="Email to reply">
-          </div>
-          <div class="form-group">
-            <label for="email">Message Body</label><br>
-
-            <textarea id='message' name="message" cols="30" rows="10" placeholder="Message body">
-            </textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit"  class="btn btn-primary"><img src="images/message.png" alt=""></button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-  <script src="./js/app.js"></script>
-</body>
-</html>
+    <script src="./js/app.js"></script>
+  </body>
+  </html>

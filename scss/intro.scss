@@ -2,25 +2,23 @@
   width: 100%;
   height: 85%;
   min-height: 500px;
-  max-height: 900px;
-  // background-image: url("../images/backgroundTest3.jpg");
-  // background-size: contain;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  background-color: rgba(0,0,0,0);
   display: table;
   padding: 0px;
-  div {
+  >div {
+    z-index: -2;
     background-color: rgba(0, 0, 0, 0.2 );
     width: 100%;
     height: 100%;
-    align-content: center;
+    position: relative;
     display: table;
-    span {
+    >span {
       display: table-cell;
       vertical-align: middle;
       color: ghostwhite;
       font-size: 65px;
+      .name {
+
+      }
       p {
         font-size: 25px;
       }
