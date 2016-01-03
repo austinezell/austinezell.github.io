@@ -10,7 +10,6 @@ $document.ready(function(){
 
   window.onscroll = function(event) {
     const currentDistance = $(window).scrollTop()
-    console.log(currentDistance);
     let $name = $("#intro>div>span");
     if (currentDistance > 192 && currentDistance < 450){
       if (!$name.attr("style")){
