@@ -31,3 +31,17 @@
     border-bottom: 80px solid rgb(50, 50, 50);
   }
 }
+
+section.about-me-background {
+  padding: 0px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(50, 50, 50);
+}
+
+#appearing-container {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}

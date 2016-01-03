@@ -9,24 +9,31 @@ $document.ready(function(){
   let topMargin = $body.css("margin-top");
 
   window.onscroll = function(event) {
-    let $name = $("#intro>div>span")
-    console.log($(window).scrollTop());
-    console.log($name.offset().top);
-    if ($(window).scrollTop() > $name.offset().top){
-      console.log($('.name'));
-      $name.css({
-        "position": "fixed",
-        "top": topMargin,
-        "margin-left": "auto",
-        "margin-right": "auto",
-        "right": "0",
-        "left": "0",
-        "z-index": "-1"
-      })
+    const currentDistance = $(window).scrollTop()
+    console.log(currentDistance);
+    let $name = $("#intro>div>span");
+    if (currentDistance > 192 && currentDistance < 450){
+      if (!$name.attr("style")){
+        $name.css({
+          "position": "fixed",
+          "top": topMargin,
+          "margin-left": "auto",
+          "margin-right": "auto",
+          "right": "0",
+          "left": "0"
+        })
+      }
+      const newOpacity = 1 - currentDistance/420
+      $name.css("opacity", newOpacity)
     }
-    // else if ($(window).scrollTop() < $name.offset().top) {
-    //   $(".name").attr("style", "")
-    // }
+    else if (currentDistance < 192) {
+      $name.attr("style", "")
+    }
+    if (currentDistance > 450) {
+      $("#appearing-container").animate({
+        opacity: 1
+      }, 2500)
+    }
   }
 
   $siteNavLinks.on("click", function(event){

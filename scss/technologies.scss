@@ -25,18 +25,15 @@
     display: inline-block;
   }
   .down-triangle {
-    // background-color: $blue;
-    // position: absolute;
     width: 0;
     height: 0;
     border-left: 150px solid $blue;
     border-top: 80px solid transparent;
     border-right: 150px solid $blue;
   }
-  .right, .left {
+  .side {
     width: -moz-calc(50% - 150px);
     width: -webkit-calc(50% - 150px);
-    // width: -o-calc(50% - 150px);
     width: calc(50% - 150px);
     background-color: $blue;
     height: 100%;
