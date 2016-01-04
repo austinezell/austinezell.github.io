@@ -1,5 +1,5 @@
 $blue: rgb(31, 74, 110);
-body {
+body{
   font-family: "Lucida Console", Lucida, monospace;
   min-width: 261px;
   margin-top: 64px;
@@ -10,7 +10,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-
 
 
 .title {
@@ -46,7 +45,18 @@ section{
 "./aboutMe",
 "./portfolio";
 
+@media (max-width: 510px) {
+  .title {
+    font-size: 2.5em;
+  }
+  #intro>div>span {
+    font-size: 2.5em;
+  }
+  #intro>div>span>p {
+    font-size: 1rem;
+  }
 
+}
 
 #get-in-touch {
   align-content: center;

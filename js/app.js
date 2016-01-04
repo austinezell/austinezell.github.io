@@ -11,7 +11,7 @@ $document.ready(function(){
   window.onscroll = function(event) {
     const currentDistance = $(window).scrollTop()
     let $name = $("#intro>div>span");
-    if (currentDistance > 192 && currentDistance < 450){
+    if (currentDistance > 192 && currentDistance < 480){
       if (!$name.attr("style")){
         $name.css({
           "position": "fixed",

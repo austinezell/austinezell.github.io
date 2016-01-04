@@ -27,14 +27,14 @@
   .down-triangle {
     width: 0;
     height: 0;
-    border-left: 150px solid $blue;
+    border-left: 130px solid $blue;
     border-top: 80px solid transparent;
-    border-right: 150px solid $blue;
+    border-right: 130px solid $blue;
   }
   .side {
-    width: -moz-calc(50% - 150px);
-    width: -webkit-calc(50% - 150px);
-    width: calc(50% - 150px);
+    width: -moz-calc(50% - 130px);
+    width: -webkit-calc(50% - 130px);
+    width: calc(50% - 130px);
     background-color: $blue;
     height: 100%;
   }
