@@ -32,6 +32,7 @@ $document.ready(function(){
       $("#appearing-container").animate({
         opacity: 1
       }, 2500)
+      $name.css("opacity", 0)
     }
   }
 
