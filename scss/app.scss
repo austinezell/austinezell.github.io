@@ -48,6 +48,11 @@ section{
 "./technologies",
 "./aboutMe",
 "./portfolio";
+@media (max-width: 680px) {
+  #intro>div>span {
+    font-size: 4.7rem;
+  }
+}
 
 @media (max-width: 510px) {
   .title {
