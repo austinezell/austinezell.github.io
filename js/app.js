@@ -4,13 +4,13 @@ var $document = $(document)
 
 $document.ready(function(){
   $('#message').val('')
-  const $siteNavLinks = $("#siteNav a")
-  const $body = $("body");
-  let topMargin = $body.css("margin-top");
+  var $siteNavLinks = $("#siteNav a")
+  var $body = $("body");
+  var topMargin = $body.css("margin-top");
 
   window.onscroll = function(event) {
-    const currentDistance = $(window).scrollTop()
-    let $name = $("#intro>div>span");
+    var currentDistance = $(window).scrollTop()
+    var $name = $("#intro>div>span");
     if (currentDistance > 192 && currentDistance < 480){
       if (!$name.attr("style")){
         $name.css({
@@ -22,7 +22,7 @@ $document.ready(function(){
           "left": "0"
         })
       }
-      const newOpacity = 1 - currentDistance/420
+      var newOpacity = 1 - currentDistance/420
       $name.css("opacity", newOpacity)
     }
     else if (currentDistance < 192) {
@@ -38,16 +38,16 @@ $document.ready(function(){
 
   $siteNavLinks.on("click", function(event){
     event.preventDefault();
-    const location  = $(this).attr("href");
-    const marginValue = topMargin.replace("px", "")
-    const offset = location === "#aboutMe" ? +marginValue + 80 : +marginValue
+    var location  = $(this).attr("href");
+    var marginValue = topMargin.replace("px", "")
+    var offset = location === "#aboutMe" ? +marginValue + 80 : +marginValue
     $('body, html').stop().animate({
       scrollTop: $(location).offset().top - offset
     }, 1500, 'easeOutCirc');
   })
 
   $("#navButton").on("click", function(event){
-    const newMargin = topMargin === "64px" ? "281px" : "64px";
+    var newMargin = topMargin === "64px" ? "281px" : "64px";
     topMargin = newMargin;
     $body.animate({marginTop: newMargin}, 800);
   })
