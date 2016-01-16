@@ -42,12 +42,12 @@ section{
 }
 
 
-@import "./materializeCard",
-"./intro",
-"./nav",
-"./technologies",
-"./aboutMe",
-"./portfolio";
+@import "./_materializeCard",
+"./_intro",
+"./_nav",
+"./_technologies",
+"./_aboutMe",
+"./_portfolio";
 @media (max-width: 680px) {
   #intro>div>span {
     font-size: 4.7rem;
