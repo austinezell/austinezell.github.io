@@ -1,7 +1,7 @@
 $blue: rgb(31, 74, 110);
-html {
-  min-width: 300px;
-}
+// html, body {
+//   min-width: 300px;
+// }
 
 body{
   font-family: "Lucida Console", Lucida, monospace;
@@ -66,18 +66,11 @@ section{
   }
 }
 
-#get-in-touch {
-  align-content: center;
-  background-color: whitesmoke;
-  input, textarea {
-    text-align: center;
-  }
-  .email {
-    border: 1px solid black;
-    border-radius: 15px;
-  }
-}
 
 label {
   font-size: 28px;
+}
+
+.input, textarea {
+  text-align: center;
 }

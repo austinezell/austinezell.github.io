@@ -1,18 +1,41 @@
 "use strict"
 
 var $document = $(document)
-
 $document.ready(function(){
   $('#message').val('')
   var $siteNavLinks = $("#siteNav a")
   var $body = $("body");
   var topMargin = $body.css("margin-top");
+  var $name = $("#name");
+  var $email = $("#email");
+  var $resume = $("#resume");
+  var $contactLinks =$(".contact-link");
+  var linkIsClear = true;
 
   window.onscroll = function(event) {
-    var currentDistance = $(window).scrollTop()
-    var $name = $("#intro>div>span");
-    if (currentDistance > 192 && currentDistance < 480){
+    var shiftDistance = (window.innerWidth/2) -document.getElementById("email").offsetWidth-10;
+    var currentDistance = window.pageYOffset;
+    var distanceToAboutMe = $("#aboutMe").offset().top;
+    console.log(currentDistance);
+
+    if(currentDistance < 195) {
+      if ($name.attr("style")){
+        $name.attr('style', "")
+      }
+      var shift = (currentDistance/195) * shiftDistance
+      $email.css({
+        "transform": shift ? "translateX(-"+shift+"px)" : "",
+        "position": "relative",
+        "top": "0"
+      }).addClass("transitioning")
+      $resume.css({
+        "transform": shift ? "translateX("+shift+"px)" : "",
+        "position": "relative",
+        "top": "0"
+      }).addClass("transitioning")
+    }else if (currentDistance > 195 && currentDistance < 480){
       if (!$name.attr("style")){
+        var topOffset = document.getElementById("name").offsetHeight/2;
         $name.css({
           "position": "fixed",
           "top": topMargin,
@@ -20,20 +43,65 @@ $document.ready(function(){
           "margin-right": "auto",
           "right": "0",
           "left": "0"
-        })
+        });
+        $contactLinks.css("top", topOffset);
       }
-      var newOpacity = 1 - currentDistance/420
-      $name.css("opacity", newOpacity)
+      var newOpacity = 1 - (currentDistance - 195)/270
+      $name.css("opacity", newOpacity);
+
+      if ( currentDistance < 290 && currentDistance >= 195) {
+        $email.css({
+          "position": "relative",
+          "left": "0",
+          "transform": "translateX(-"+shiftDistance+"px)"
+        });
+        $resume.css({
+          "position": "relative",
+          "right": "0",
+          "transform": "translateX("+shiftDistance+"px)"
+        });
+      }
     }
-    else if (currentDistance < 192) {
-      $name.attr("style", "")
+    if (currentDistance >= 290) {
+      $email.css({
+        "position": "fixed",
+        "left": "0",
+        "top": topMargin,
+        "transform": ""
+      }).removeClass("transitioning");
+      $resume.css({
+        "position": "fixed",
+        "right": "0",
+        "top": topMargin,
+        "transform": ""
+      }).removeClass("transitioning");
+
     }
-    if (currentDistance > 450) {
+
+    if (currentDistance > 550 && currentDistance < distanceToAboutMe -200){
       $("#appearing-container").animate({
         opacity: 1
       }, 2500)
-      $name.css("opacity", 0)
+      $name.css("opacity", 0);
+      if (!linkIsClear){
+        $contactLinks.animate({
+          "background-color": "rgba(0,0,0,0)"
+        })
+        linkIsClear = true;
+      }
     }
+    else if (linkIsClear && currentDistance > distanceToAboutMe-200 && currentDistance < $("#portfolio").offset().top -80){
+      $contactLinks.animate({
+        "background-color": "rgba(0,0,0,.8)"
+      })
+      linkIsClear = false;
+    } if (!linkIsClear && currentDistance > $("#portfolio").offset().top -80){
+      $contactLinks.animate({
+        "background-color": "rgba(0,0,0,0)"
+      })
+      linkIsClear = true;
+    }
+
   }
 
   $siteNavLinks.on("click", function(event){

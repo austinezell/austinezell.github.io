@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/app.css"/>
   <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA4+TNAKqqhQDTzrkA09atANTSswC/u6UAw8CZAK2uiAD39/MAsqyLAPv+7QD8/PAAs7l8AMjJmQC5toUA4ODCAJCIewCso3oA5OPCALm1rwC7uakA9/H0AK6xgADl3uAA1tC3ANfUsQDX1bQA5uHgALOxgADU0sYAxsWgANvUugDHwrsA0MugAOPbvQC5vZIApaWKAOTqtADTzrIA1dSyAOvjzACzqIoAtLB+ANvOuwD8+fsAubSKAO/t4QC6vo0A5ODEAOLc0wCoqYUA9PHtAOHmzQDo3tAArrB/ANTUswDU07kA693WAPrz8wCBfXgA1tG8ANjTuQD9/PMAtrOIAMnCtADi38IA3dvaANXOtADT0rcAqqiVAOrd1wDs7sIAsLKGANjVtwC2rIYA19LJAOfs6QDs6+YAt7SVALiymADj2s8A0M6sAOTizADV06kAsKx+APT48gDW1KwA1dG1ANbRtQCxtX4A2tS1ANnTuwCgmIIAr6euALeykADt7OEA7+3kALm5kwDe3soA4uK7AKaniwDX0rAArrR8APv29gD79/kAs7V/APz59gC2sYUAt6+IAOvq3ACMgX4A2tXUAN7czgDf3ssA4+W8AKmmgADg384A0s2rAOLhywD38O4Aq6yJAMO7owD4+e4A5ejXAP755QCzsIMAtKyJAOrr1wC1sokA3tm0AOzo4ADf18kA4dy9AKSdigDw7OwA497DAPLw5gDy8ekA8u3vAOLczwCqoocA4eLPAOPg0gDV0bgA+Pj1ANfUuAD88/gA+fv1ALSygQD6+/UAtrR+APDq1QDg27sAu7WKAO3u6gD08N4A4OPKANPRpwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATF8SSyuXbI2EAAAAAAAAAHkOngqZT1w9DyUAAAAAAAAUTnt8DGALNYIuUAAAAAAAQ5SWa2gWLWlhhXoAAAAAAIuTeH0fYpw7VoBuADQcGHEkMDeVImYbOImRm15lJkiYOkcpVZogAzlZCU08RheIUXedclJUWxookD8AAI5CamSPU4wxBxmSRVgvAABwNixASQEyE1p2JwVKHgAAh2cdfyN1YxCGXVdEBgAAAACDMw1+PnMIbxEEQQAAAAAAAAAhdG0qgQIVigAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD4AwAA+AEAAPgAAAD4AAAA+AAAAIAAAAAAAAAAAAEAAIABAACAAQAAgAMAAMAHAADwDwAA//8AAP//AAA=" rel="icon" type="image/x-icon" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="./js/app.js"></script>
 </head>
 <body>
 
@@ -27,21 +31,26 @@
         <ul class="nav navbar-nav navbar-right" id="siteNav">
           <li><a href="#aboutMe">About Me</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#get-in-touch">Contact Me</a></li>
+          <li><a href="#intro">Top</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section id='intro' align="center">
-
+  <section id='intro'>
     <div>
-      <span class="animated zoomIn">
-        Austin Reed Ezell
-        <p>JavaScript Developer;</p>
-        <a href class="contact-link" id="email"  data-keyboard="true" data-toggle="modal" data-target="#emailModal"><img src="./images/message.png" alt=""/></a>
-        <a href class="contact-link" id="resume"  data-keyboard="true" data-toggle="modal" data-target="#emailModal"><img src="./images/resume.png" alt=""/></a>
-      </span>
+      <span>
+        <div id="name" class="animated zoomIn">
+          Austin Reed Ezell
+          <p>JavaScript Developer;</p>
+        </div>
+        <div class="contact-link-div transitioning" id="email">
+          <a href class="contact-link" data-keyboard="true" data-toggle="modal" data-target="#emailModal"><img src="./images/message.png" alt=""/></a>
+          </div
+          ><div class="contact-link-div  transitioning" id="resume">
+            <a href class="contact-link" data-keyboard="true" data-toggle="modal" data-target="#emailModal"><img src="./images/resume.png" alt=""/></a>
+          </div>
+        </span>
       </div>
     </section>
 
@@ -285,73 +294,41 @@
         </div>
       </section>
 
-      <!-- <section id='get-in-touch'>
-      <div class="row">
-      <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 email">
-      <h1>Drop me a line!</h1><hr>
-      <form action="https://getsimpleform.com/messages?form_api_token=02f9ef3aab61a87489bb782f0a16905d" method="post">
-      <div class="form-group">
-      <label for="name">Name</label><br>
-      <input type="text" name="name" required="required" placeholder="Full Name">
-    </div>
-    <div class="form-group">
-    <label for="email">Email</label><br>
-    <input type="text" email="email" placeholder="Email to reply">
-  </div>
-  <div class="form-group">
-  <label for="email">Message Body</label><br>
+      <div align='middle' id="emailModal" tabindex="-1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Drop Me a Line!</h4>
+            </div>
+            <div class="modal-body">
+              <form action="https://getsimpleform.com/messages?form_api_token=02f9ef3aab61a87489bb782f0a16905d" method="post">
+                <div class="form-group">
+                  <label for="name">Name</label><br>
+                  <input type="text" name="name" required="required" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label><br>
+                  <input type="text" email="email" placeholder="Email to reply">
+                </div>
+                <div class="form-group">
+                  <label for="email">Message Body</label><br>
 
-  <textarea id='message' name="message" cols="30" rows="10" placeholder="Message body">
-</textarea>
-</div>
-<div class="form-group">
-<button type="submit"  class="btn btn-primary"><img src="images/message.png" alt=""></button>
-</div>
-</form>
-</div>
-</div>
-</section> -->
+                  <textarea id='message' name="message" cols="30" rows="8" placeholder="Message body">
+                  </textarea>
+                </div>
+                <div class="form-group">
+                  <button type="submit"  class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span> Send</button>
+                </div>
+              </form>
+            </div>
 
-<div align='middle' id="emailModal" tabindex="-1" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Drop Me a Line!</h4>
-      </div>
-      <div class="modal-body">
-        <form action="https://getsimpleform.com/messages?form_api_token=02f9ef3aab61a87489bb782f0a16905d" method="post">
-          <div class="form-group">
-            <label for="name">Name</label><br>
-            <input type="text" name="name" required="required" placeholder="Full Name">
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label><br>
-            <input type="text" email="email" placeholder="Email to reply">
-          </div>
-          <div class="form-group">
-            <label for="email">Message Body</label><br>
-
-            <textarea id='message' name="message" cols="30" rows="8" placeholder="Message body">
-            </textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit"  class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span> Send</button>
-          </div>
-        </form>
+        </div>
       </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-<script src="./js/app.js"></script>
-</body>
-</html>
+    </body>
+    </html>
