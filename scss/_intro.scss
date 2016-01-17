@@ -21,49 +21,45 @@
         font-size: 2.4rem;
       }
     }
-}
-.contact-link-div.transitioning{
-  transition: transform .5s ease-out;
-  -moz-transition: transform .5s ease-out;
-  -webkit-transition: transform .5s ease-out;
-}
+  }
+  .contact-link-div.transitioning{
+    transition: transform .5s ease-out;
+    -moz-transition: transform .5s ease-out;
+    -webkit-transition: transform .5s ease-out;
+  }
 
-.contact-link-div{
-  display: inline-block;
-  padding: 1rem;
-  .contact-link{
-    z-index: 5;
-    font-size: 2rem;
-    padding: 2rem;
-    border: 5px solid white;
-    border-radius: 50%;
-    transition: background-color .5s ease-out;
+  .contact-link-div{
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    .contact-link{
+      z-index: 5;
+      font-size: 2rem;
+      padding: 2rem;
+      border: 5px solid white;
+      border-radius: 50%;
+      transition: all .5s ease-out;
+      // -webkit-transition: background-color .5s ease-out, border-color .5s ease-out;
+      // -moz-transition: background-color .5s ease-out, border-color .5s ease-out;
+      img{
+        width: 40px;
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+        -moz-filter: invert(100%);
+        transition: filter .5s ease-out;
+        -moz-transition: filter .5s ease-out;
+        -webkit-transition: filter .5s ease-out;
+      }
+    }
   }
-  img{
-    width: 40px;
-    filter: invert(100%);
-    -webkit-filter: invert(100%);
+  .contact-link:hover{
+    background-color: white;
+    border-color: black;
   }
-}
-.contact-link:hover{
-  background-color: white;
-  -webkit-transform:scale(1.5);
-  -moz-transform:scale(1.5);
-  -ms-transform:scale(1.5);
-  -o-transform:scale(1.5);
-  transform:scale(1.5);
-}
-.contact-link-div:hover {
-  -webkit-transform:scale(1.5);
-  -moz-transform:scale(1.5);
-  -ms-transform:scale(1.5);
-  -o-transform:scale(1.5);
-  transform:scale(1.5);
-}
-// .contact-link:hover img {
-//   filter: invert(0);
-//   -webkit-filter: invert(0%);
-// }
+  .contact-link:hover img {
+    filter: invert(0);
+    -webkit-filter: invert(0%);
+  }
 }
 
 

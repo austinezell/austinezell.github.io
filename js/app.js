@@ -10,6 +10,7 @@ $document.ready(function(){
   var $email = $("#email");
   var $resume = $("#resume");
   var $contactLinks =$(".contact-link");
+  var $contactDivs = $(".contact-link-div");
   var linkIsClear = true;
 
   window.onscroll = function(event) {
@@ -44,15 +45,16 @@ $document.ready(function(){
           "right": "0",
           "left": "0"
         });
-        $contactLinks.css("top", topOffset);
+        $contactDivs.css("top", topOffset);
       }
       var newOpacity = 1 - (currentDistance - 195)/270
       $name.css("opacity", newOpacity);
 
-      if ( currentDistance < 290 && currentDistance >= 195) {
+      if ( currentDistance < 340 && currentDistance >= 195) {
+        // if ($email.css("translateX") !=== )
         $email.css({
           "position": "relative",
-          "left": "0",
+          "left": "",
           "transform": "translateX(-"+shiftDistance+"px)"
         });
         $resume.css({
@@ -62,7 +64,7 @@ $document.ready(function(){
         });
       }
     }
-    if (currentDistance >= 290) {
+    if (currentDistance >= 340) {
       $email.css({
         "position": "fixed",
         "left": "0",
@@ -75,7 +77,6 @@ $document.ready(function(){
         "top": topMargin,
         "transform": ""
       }).removeClass("transitioning");
-
     }
 
     if (currentDistance > 550 && currentDistance < distanceToAboutMe -200){
@@ -84,21 +85,15 @@ $document.ready(function(){
       }, 2500)
       $name.css("opacity", 0);
       if (!linkIsClear){
-        $contactLinks.animate({
-          "background-color": "rgba(0,0,0,0)"
-        })
+        $contactLinks.css("background-color", "")
         linkIsClear = true;
       }
     }
     else if (linkIsClear && currentDistance > distanceToAboutMe-200 && currentDistance < $("#portfolio").offset().top -80){
-      $contactLinks.animate({
-        "background-color": "rgba(0,0,0,.8)"
-      })
+      $contactLinks.css("background-color", "rgba(0,0,0,.8)")
       linkIsClear = false;
     } if (!linkIsClear && currentDistance > $("#portfolio").offset().top -80){
-      $contactLinks.animate({
-        "background-color": "rgba(0,0,0,0)"
-      })
+      $contactLinks.css("background-color", "")
       linkIsClear = true;
     }
 
