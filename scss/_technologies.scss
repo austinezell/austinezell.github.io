@@ -7,11 +7,23 @@
     width: 150px;
     margin: 4px;
     height: auto;
-    -webkit-filter: grayscale(100%);
+    transition: filter .4s ease;
+    -o-transition: filter .4s ease;
+    -ms-transition: filter .4s ease;
+    -moz-transition: filter .4s ease;
+    -webkit-transition: filter .4s ease;
+
     filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
   }
   img:hover {
     filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
   }
 }

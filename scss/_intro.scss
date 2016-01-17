@@ -39,8 +39,8 @@
       border: 5px solid white;
       border-radius: 50%;
       transition: all .5s ease-out;
-      // -webkit-transition: background-color .5s ease-out, border-color .5s ease-out;
-      // -moz-transition: background-color .5s ease-out, border-color .5s ease-out;
+      -webkit-transition: all .5s ease-out;
+      -moz-transition: all .5s ease-out;
       img{
         width: 40px;
         filter: invert(100%);
@@ -86,4 +86,10 @@
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
+}
+
+#name{
+  transition: opacity .1s ease;
+  -webkit-transition: opacity .1s ease;
+  -moz-transition: opacity .1s ease;
 }
