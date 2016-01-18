@@ -11,19 +11,34 @@ $document.ready(function(){
   var $resume = $("#resume");
   var $contactLinks =$(".contact-link");
   var $contactDivs = $(".contact-link-div");
+  var $techTriangle =$("#tech-triangle-container")
   var linkIsClear = true;
+  var distanceToName = $name.offset().top - parseInt(topMargin);
+  var distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
+  var nameIsFixed = false, linkIsFixed= false;
+  // var distanceToTechnologies = $techTriangle.offset().top -parseInt(topMargin);
+
+
+  window.onresize = function (){
+    distanceToName = $name.offset().top - parseInt(topMargin);
+    distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
+    console.log('hi');
+    console.log(distanceToName, distanceToLinks);
+  }
 
   window.onscroll = function(event) {
-    var shiftDistance = (window.innerWidth/2) -document.getElementById("email").offsetWidth-10;
+    var shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
     var currentDistance = window.pageYOffset;
     var distanceToAboutMe = $("#aboutMe").offset().top;
     console.log(currentDistance);
 
-    if(currentDistance < 195) {
+    if(currentDistance < distanceToName) {
       if ($name.attr("style")){
         $name.attr('style', "")
       }
-      var shift = (currentDistance/195) * shiftDistance
+      var shift = (currentDistance/distanceToName) * shiftDistance
+      // console.log("shift", shift);
+      // console.log("sd", shiftDistance);
       $email.css({
         "transform": shift ? "translateX(-"+shift+"px)" : "",
         "position": "relative",
@@ -34,7 +49,7 @@ $document.ready(function(){
         "position": "relative",
         "top": "0"
       }).addClass("transitioning")
-    }else if (currentDistance > 195 && currentDistance < 480){
+    }else if (currentDistance > distanceToName && currentDistance < 480){
       if (!$name.attr("style")){
         var topOffset = document.getElementById("name").offsetHeight/2;
         $name.css({
@@ -47,11 +62,10 @@ $document.ready(function(){
         });
         $contactDivs.css("top", topOffset);
       }
-      var newOpacity = 1 - (currentDistance - 195)/270
+      var newOpacity = 1 - (currentDistance - distanceToName)/270
       $name.css("opacity", newOpacity);
 
-      if ( currentDistance < 340 && currentDistance >= 195) {
-        // if ($email.css("translateX") !=== )
+      if (currentDistance < distanceToLinks) {
         $email.css({
           "position": "relative",
           "left": "",
@@ -64,7 +78,7 @@ $document.ready(function(){
         });
       }
     }
-    if (currentDistance >= 340) {
+    if (currentDistance >= distanceToLinks) {
       $email.css({
         "position": "fixed",
         "left": "0",
@@ -106,7 +120,7 @@ $document.ready(function(){
     var offset = location === "#aboutMe" ? +marginValue + 80 : +marginValue
     $('body, html').stop().animate({
       scrollTop: $(location).offset().top - offset
-    }, 1500, 'easeOutCirc');
+    }, 1500, 'easeInCubic');
   })
 
   $("#navButton").on("click", function(event){

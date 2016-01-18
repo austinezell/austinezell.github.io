@@ -57,20 +57,36 @@ section{
 "./_technologies",
 "./_aboutMe",
 "./_portfolio";
+
 @media (max-width: 680px) {
   #intro>div>span {
     font-size: 4.7rem;
   }
+  #rotation-row {
+    font-size: 2.3rem;
+  }
+  .contact-link-div>.contact-link img{
+    width: 30px;
+  }
+  .contact-link-div>.contact-link{
+    padding: 1.2rem;
+  }
 }
 
 @media (max-width: 510px) {
+  .contact-link-div>.contact-link img{
+    width: 20px;
+  }
+  .contact-link-div>.contact-link{
+    padding: .5rem;
+  }
   .title {
     font-size: 3rem;
   }
   #intro>div>span {
     font-size: 3rem;
   }
-  #intro>div>span>p {
+  #intro>div>span #rotation-row {
     font-size: 2.3rem;
   }
 }
@@ -102,12 +118,35 @@ label {
 }
 #emailModal {
   input, textarea {
-    text-align: center;
+    text-align: justify;
+    color: black;
     border: 4px solid rgba(0,0,0,0);
     border-left: 4px solid black;
     border-top: 4px solid black;
   }
+  input:focus, textarea:focus, textarea:active, input:focus{
+    outline-color: white;
+  }
+
   label, .modal-title {
     text-shadow: 4px 4px 2px black;
+    outline-color: white;
   }
+}
+
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder {
+   text-align: center;
+}
+
+::-moz-placeholder {
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
 }
