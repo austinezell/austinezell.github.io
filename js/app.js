@@ -1,5 +1,6 @@
 "use strict"
 
+
 var $document = $(document)
 $document.ready(function(){
   $('#message').val('')
@@ -16,14 +17,32 @@ $document.ready(function(){
   var distanceToName = $name.offset().top - parseInt(topMargin);
   var distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
   var nameIsFixed = false, linkIsFixed= false;
+  var $rotationTerms = $(".rotation-terms");
+  var $semicolon = $("#semicolon");
+  var percentRotate = 100;
   // var distanceToTechnologies = $techTriangle.offset().top -parseInt(topMargin);
+
+  function rotate () {
+    if (percentRotate > 0) {
+      percentRotate -= 20;
+      $rotationTerms.css({"transform": "translateY(-"+percentRotate+"%)"})
+    } else if (percentRotate > -1){
+      percentRotate = -100
+      $semicolon.removeClass('transparent');
+    } else{
+      $semicolon.addClass("colored");
+      $("#javascript").addClass("underlined");
+      clearInterval(rotatorInteveral)
+    }
+  }
+
+  var rotatorInteveral = setInterval(rotate, 1000)
+
 
 
   window.onresize = function (){
     distanceToName = $name.offset().top - parseInt(topMargin);
     distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
-    console.log('hi');
-    console.log(distanceToName, distanceToLinks);
   }
 
   window.onscroll = function(event) {
@@ -37,8 +56,6 @@ $document.ready(function(){
         $name.attr('style', "")
       }
       var shift = (currentDistance/distanceToName) * shiftDistance
-      // console.log("shift", shift);
-      // console.log("sd", shiftDistance);
       $email.css({
         "transform": shift ? "translateX(-"+shift+"px)" : "",
         "position": "relative",
