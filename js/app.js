@@ -19,7 +19,7 @@ $document.ready(function(){
   var nameIsFixed = false, linkIsFixed= false;
   var $rotationTerms = $(".rotation-terms");
   var $semicolon = $("#semicolon");
-  var percentRotate = 100;
+  var percentRotate = 120;
   // var distanceToTechnologies = $techTriangle.offset().top -parseInt(topMargin);
 
   function rotate () {
@@ -28,10 +28,10 @@ $document.ready(function(){
       $rotationTerms.css({"transform": "translateY(-"+percentRotate+"%)"})
     } else if (percentRotate > -1){
       percentRotate = -100
-      $semicolon.removeClass('transparent');
-    } else{
-      $semicolon.addClass("colored");
       $("#javascript").addClass("underlined");
+    } else{
+      // $semicolon.addClass("colored");
+      $semicolon.removeClass('transparent');
       clearInterval(rotatorInteveral)
     }
   }
