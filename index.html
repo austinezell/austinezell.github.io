@@ -18,38 +18,28 @@
 <body>
 
   <nav id="myNavBar" class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <button type="button" id="navButton" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar">
-        <ul class="nav navbar-nav">
-          <li>
-            <a target="_blank" href="https://github.com/austinezell">
-              <img class='navbar-image' src="images/socialMedia/Github.png" alt="">
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.linkedin.com/in/austinezell">
-              <img class='navbar-image' src="images/socialMedia/LinkedIn.png" alt="">
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://twitter.com/austin_ezell">
-              <img class='navbar-image' src="images/socialMedia/Twitter.png" alt="">
-            </a>
-          </li>
-        </ul>
+    <ul class="nav navbar-nav">
+      <li>
+        <a target="_blank" href="https://github.com/austinezell">
+          <img class='navbar-image' src="images/socialMedia/Github.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.linkedin.com/in/austinezell">
+          <img class='navbar-image' src="images/socialMedia/LinkedIn.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://twitter.com/austin_ezell">
+          <img class='navbar-image' src="images/socialMedia/Twitter.png" alt="">
+        </a>
+      </li>
+    </ul>
 
-        <ul class="nav navbar-nav navbar-right" id="siteNav">
-          <li><a href="#aboutMe">About Me</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#intro">Top</a></li>
-        </ul>
-      </div>
-    </div>
+    <ul class="nav navbar-nav navbar-right" id="siteNav">
+      <li><a class="site-nav-link" href="#aboutMe">About Me</a></li>
+      <li><a class="site-nav-link" href="#portfolio">Portfolio</a></li>
+    </ul>
   </nav>
 
   <section id='intro'>
@@ -70,12 +60,12 @@
           </div>
         </div>
         <div class="contact-link-div transitioning" id="email">
-          <a href class="contact-link" data-keyboard="true" data-toggle="modal" data-target="#emailModal">
+          <a href class="contact-link" data-keyboard="true" title="Contact Me" data-toggle="modal" data-target="#emailModal">
             <img src="./images/message.png" alt="" />
           </a>
           </div
-          ><div class="contact-link-div  transitioning" id="resume">
-            <a href class="contact-link" data-keyboard="true" data-toggle="modal" data-target="#resumeModal">
+          ><div class="contact-link-div transitioning" id="resume">
+            <a href class="contact-link" title="R&eacute;sum&eacute;" data-keyboard="true" data-toggle="modal" data-target="#resumeModal">
               <img src="./images/resume.png" alt="" />
             </a>
           </div>
@@ -391,6 +381,11 @@
 
     </section>
 
+    <div class="circle-link-div" id="to-the-top">
+      <a href="#intro" title="Back to the top" class="circle-link site-nav-link">
+        <img src="./images/up.png" alt=""/>
+      </a>
+    </div>
   </body>
 
   </html>

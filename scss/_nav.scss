@@ -1,8 +1,11 @@
 nav.navbar {
   margin-bottom: 0px;
-  min-height: 64px;
-  background-color: rgb(38, 38, 38);
+  background-color: darken(grey, 35);
+  height: 54px;
+  margin: 0px;
+  border-bottom: 1px solid black;
   .navbar-image {
+    width: 24px;
     filter: invert(100%);
     -webkit-filter: invert(100%);
   }
@@ -19,6 +22,27 @@ nav.navbar {
       a:hover {
         color: skyblue;
       }
+      a.current{
+        border: 1px solid lighten(grey, 25);
+        background-color: lighten(grey, 15);
+        color: black;
+      }
     }
   }
+}
+
+.navbar-collapse.collapse {
+  display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+  float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important;
+}
+
+.navbar-right {
+  float: right!important;
 }

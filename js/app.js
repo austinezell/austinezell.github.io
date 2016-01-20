@@ -4,7 +4,7 @@
 var $document = $(document)
 $document.ready(function(){
   $('#message').val('')
-  var $siteNavLinks = $("#siteNav a")
+  var $siteNavLinks = $(".site-nav-link")
   var $body = $("body");
   var topMargin = $body.css("margin-top");
   var $name = $("#name");
@@ -16,40 +16,35 @@ $document.ready(function(){
   var linkIsClear = true;
   var distanceToName = $name.offset().top - parseInt(topMargin);
   var distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
-  var nameIsFixed = false, linkIsFixed= false;
   var $rotationTerms = $(".rotation-terms");
   var $semicolon = $("#semicolon");
-  var percentRotate = 120;
-  // var distanceToTechnologies = $techTriangle.offset().top -parseInt(topMargin);
+  var percentRotate = 100;
 
   function rotate () {
     if (percentRotate > 0) {
       percentRotate -= 20;
       $rotationTerms.css({"transform": "translateY(-"+percentRotate+"%)"})
-    } else if (percentRotate > -1){
-      percentRotate = -100
-      $("#javascript").addClass("underlined");
-    } else{
-      // $semicolon.addClass("colored");
+    } else {
       $semicolon.removeClass('transparent');
       clearInterval(rotatorInteveral)
     }
   }
 
   var rotatorInteveral = setInterval(rotate, 1000)
+  var shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
 
 
 
   window.onresize = function (){
     if($name.css("position") !== "fixed") distanceToName = $name.offset().top - parseInt(topMargin);
     if($contactDivs.css("position")!=="fixed") distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
+    shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
   }
 
   window.onscroll = function(event) {
-    var shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
     var currentDistance = window.pageYOffset;
     var distanceToAboutMe = $("#aboutMe").offset().top;
-    console.log(currentDistance);
+    console.log(currentDistance)
 
     if(currentDistance < distanceToName) {
       if ($name.attr("style")){
@@ -110,7 +105,8 @@ $document.ready(function(){
       }).removeClass("transitioning");
     }
 
-    if (currentDistance > 550 && currentDistance < distanceToAboutMe -200){
+    if (currentDistance > 650 && currentDistance < distanceToAboutMe -200){
+      $("#to-the-top").addClass("animated slideIn");
       $("#appearing-container").animate({
         opacity: 1
       }, 2500)
@@ -141,7 +137,7 @@ $document.ready(function(){
   })
 
   $("#navButton").on("click", function(event){
-    var newMargin = topMargin === "64px" ? "281px" : "64px";
+    var newMargin = topMargin === "54px" ? "275px" : "54px";
     topMargin = newMargin;
     $body.animate({marginTop: newMargin}, 800);
   })

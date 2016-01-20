@@ -15,7 +15,7 @@ section#modals {
 body{
   font-family: "Lucida Console", Lucida, monospace;
   min-width: 300px;
-  margin-top: 64px;
+  margin-top: 54px;
   background: url('backgroundTest3.jpg') no-repeat center center fixed;
   background-image: url("../images/backgroundTest3.jpg");
   -webkit-background-size: cover;
@@ -92,9 +92,6 @@ section{
 }
 
 
-label {
-  font-size: 28px;
-}
 
 #resumeModal .modal-body{
   height: 85vh;
@@ -105,7 +102,13 @@ label {
   text-align: center;
   color: white;
   box-shadow: 8px 8px 16px black;
+  button:focus, button:active{
+    outline-color: white;
+  }
+
   .btn {
+    color: black;
+    background-color: lighten(beige, 1);
     border: 2px solid rgba(0,0,0,0);
     border-bottom: 2px solid black;
     border-right: 2px solid black;
@@ -117,6 +120,9 @@ label {
   }
 }
 #emailModal {
+  label {
+    font-size: 28px;
+  }
   input, textarea {
     text-align: justify;
     color: black;
@@ -136,17 +142,87 @@ label {
 
 
 ::-webkit-input-placeholder {
-   text-align: center;
+  text-align: center;
 }
 
 :-moz-placeholder {
-   text-align: center;
+  text-align: center;
 }
 
 ::-moz-placeholder {
-   text-align: center;
+  text-align: center;
 }
 
 :-ms-input-placeholder {
-   text-align: center;
+  text-align: center;
+}
+
+
+
+.circle-link-div{
+  position: fixed;
+  opacity: 0;
+  bottom: 10vh;
+  right: 0;
+  .circle-link{
+    font-size: 2rem;
+    padding: 2rem;
+    border: 5px solid black;
+    border-radius: 50%;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+  }
+  img {
+    width: 40px;
+  }
+  .circle-link:hover{
+    background-color: black;
+    border-color: white;
+  }
+  .circle-link:hover img {
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    filter: invert(100%);
+  }
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    transform: translate(100%, 0, 0);
+    -webkit-transform: translate(100%, 0, 0);
+    -moz-transform: translate(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  from {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate(100%, 0, 0);
+    -webkit-transform: translate(100%, 0, 0);
+    -moz-transform: translate(100%, 0, 0);
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
 }
