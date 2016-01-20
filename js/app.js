@@ -41,8 +41,8 @@ $document.ready(function(){
 
 
   window.onresize = function (){
-    distanceToName = $name.offset().top - parseInt(topMargin);
-    distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
+    if($name.css("position") !== "fixed") distanceToName = $name.offset().top - parseInt(topMargin);
+    if($contactDivs.css("position")!=="fixed") distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
   }
 
   window.onscroll = function(event) {
