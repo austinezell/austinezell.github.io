@@ -1,1 +1,1 @@
-First attempt at a personal website.
+Personal Website for portfolio and design.
