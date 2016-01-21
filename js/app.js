@@ -136,10 +136,4 @@ $document.ready(function(){
     }, 1500, 'easeInCubic');
   })
 
-  $("#navButton").on("click", function(event){
-    var newMargin = topMargin === "54px" ? "275px" : "54px";
-    topMargin = newMargin;
-    $body.animate({marginTop: newMargin}, 800);
-  })
-
 })
