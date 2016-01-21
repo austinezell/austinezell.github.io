@@ -161,12 +161,14 @@ section{
 
 .circle-link-div{
   position: fixed;
-  opacity: 0;
+  // opacity: 0;
   bottom: 10vh;
   right: 0;
   .circle-link{
     font-size: 2rem;
     padding: 2rem;
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
     border: 5px solid black;
     border-radius: 50%;
     transition: all .5s ease-out;
