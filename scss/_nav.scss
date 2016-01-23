@@ -8,10 +8,13 @@ nav.navbar {
     width: 24px;
     filter: invert(100%);
     -webkit-filter: invert(100%);
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
   }
   .navbar-image:hover {
-    filter: invert(0%);
-    -webkit-filter: invert(0%);
+    filter: invert(50%);
+    -webkit-filter: invert(50%);
   }
   ul.navbar-nav{
     height: 100%;

@@ -11,7 +11,6 @@ section#modals {
   padding: 0;
 }
 
-
 body{
   font-family: "Lucida Console", Lucida, monospace;
   min-width: 300px;
@@ -23,7 +22,6 @@ body{
   -o-background-size: cover;
   background-size: cover;
 }
-
 
 .title {
   font-size: 4em;
@@ -51,48 +49,6 @@ section{
 }
 
 
-@import "./_materializeCard",
-"./_intro",
-"./_nav",
-"./_technologies",
-"./_aboutMe",
-"./_portfolio";
-
-@media (max-width: 680px) {
-  #intro>div>span {
-    font-size: 4.7rem;
-  }
-  #rotation-row {
-    font-size: 2.3rem;
-  }
-  .contact-link-div>.contact-link img{
-    width: 30px;
-  }
-  .contact-link-div>.contact-link{
-    padding: 1.2rem;
-  }
-}
-
-@media (max-width: 510px) {
-  .contact-link-div>.contact-link img{
-    width: 20px;
-  }
-  .contact-link-div>.contact-link{
-    padding: .5rem;
-  }
-  .title {
-    font-size: 3rem;
-  }
-  #intro>div>span {
-    font-size: 3rem;
-  }
-  #intro>div>span #rotation-row {
-    font-size: 2.3rem;
-  }
-}
-
-
-
 #resumeModal .modal-body{
   height: 85vh;
 }
@@ -105,7 +61,6 @@ section{
   button:focus, button:active{
     outline-color: white;
   }
-
   .btn {
     color: black;
     background-color: lighten(beige, 1);
@@ -161,11 +116,13 @@ section{
 
 .circle-link-div{
   position: fixed;
-  // opacity: 0;
   bottom: 10vh;
   right: 0;
+  transform: translateY(20vh);
+  transition: transform .5s ease-out;
+  -webkit-transition: transform .5s ease-out;
+  -moz-transition: transform .5s ease-out;
   .circle-link{
-    font-size: 2rem;
     padding: 2rem;
     padding-top: 2.8rem;
     padding-bottom: 2.8rem;
@@ -228,3 +185,11 @@ section{
   -webkit-animation-name: slideIn;
   animation-name: slideIn;
 }
+
+@import "./_materializeCard",
+"./_intro",
+"./_nav",
+"./_technologies",
+"./_aboutMe",
+"./_portfolio",
+"./_breakingPoints";

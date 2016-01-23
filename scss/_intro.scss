@@ -82,17 +82,6 @@
   overflow: hidden;
   height: 5.2rem;
 }
-@media (max-width: 680px) {
-  #rotator {
-    height: 3.8rem;
-  }
-}
-
-@media (max-width: 510px ){
-  #rotator {
-    height: 2.6rem;
-  }
-}
 
 #name {
   transition: transform .3s ease-out;

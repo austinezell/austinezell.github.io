@@ -3,23 +3,25 @@
 
 var $document = $(document)
 $document.ready(function(){
-  $('#message').val('')
-  var $siteNavLinks = $(".site-nav-link")
-  var $body = $("body");
-  var topMargin = $body.css("margin-top");
-  var $name = $("#name");
-  var $email = $("#email");
-  var $resume = $("#resume");
-  var $contactLinks =$(".contact-link");
-  var $contactDivs = $(".contact-link-div");
-  var $techTriangle =$("#tech-triangle-container")
-  var linkIsClear = true;
-  var distanceToName = $name.offset().top - parseInt(topMargin);
-  var distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
-  var $rotationTerms = $(".rotation-terms");
-  var $semicolon = $("#semicolon");
-  var percentRotate = 100;
+  // $('#message').val('')
+  var $siteNavLinks = $(".site-nav-link"),
+  $body = $("body"),
+  topMargin = "54px",
+  topMarginValue= 54,
+  $name = $("#name"),
+  $email = $("#email"),
+  $resume = $("#resume"),
+  $contactLinks =$(".contact-link"),
+  $contactDivs = $(".contact-link-div"),
+  linkIsClear = true,
+  distanceToName = $name.offset().top - topMarginValue,
+  distanceToLinks = $contactDivs.offset().top - topMarginValue -10,
+  $rotationTerms = $(".rotation-terms"),
+  $semicolon = $("#semicolon"),
+  distanceToAboutMe = $("#aboutMe").offset().top,
+  percentRotate = 100;
 
+  //rotator function for "drop-down terms"
   function rotate () {
     if (percentRotate > 0) {
       percentRotate -= 20;
@@ -34,17 +36,16 @@ $document.ready(function(){
   var shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
 
 
-
+  // Check for changes in distances
   window.onresize = function (){
-    if($name.css("position") !== "fixed") distanceToName = $name.offset().top - parseInt(topMargin);
-    if($contactDivs.css("position")!=="fixed") distanceToLinks = $contactDivs.offset().top - parseInt(topMargin) -10;
+    if($name.css("position") !== "fixed") distanceToName = $name.offset().top - topMarginValue;
+    if($contactDivs.css("position")!=="fixed") distanceToLinks = $contactDivs.offset().top - topMarginValue -10;
+    distanceToAboutMe = $("#aboutMe").offset().top,
     shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
   }
 
   window.onscroll = function(event) {
     var currentDistance = window.pageYOffset;
-    var distanceToAboutMe = $("#aboutMe").offset().top;
-    console.log(currentDistance)
 
     if(currentDistance < distanceToName) {
       if ($name.attr("style")){
@@ -105,8 +106,13 @@ $document.ready(function(){
       }).removeClass("transitioning");
     }
 
+    if (currentDistance > 650){
+      $("#to-the-top").css({"transform": "translateY(0)"});
+    } else {
+      $("#to-the-top").css({"transform": ""});
+    }
+
     if (currentDistance > 650 && currentDistance < distanceToAboutMe -200){
-      $("#to-the-top").addClass("animated slideIn");
       $("#appearing-container").animate({
         opacity: 1
       }, 2500)
@@ -129,8 +135,7 @@ $document.ready(function(){
   $siteNavLinks.on("click", function(event){
     event.preventDefault();
     var location  = $(this).attr("href");
-    var marginValue = topMargin.replace("px", "")
-    var offset = location === "#aboutMe" ? +marginValue + 80 : +marginValue
+    var offset = location === "#aboutMe" ? +topMarginValue + 80 : +topMarginValue
     $('body, html').stop().animate({
       scrollTop: $(location).offset().top - offset
     }, 1500, 'easeInCubic');
