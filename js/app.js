@@ -18,10 +18,10 @@ $document.ready(function(){
   distanceToLinks = $contactDivs.offset().top - topMarginValue -10,
   $rotationTerms = $(".rotation-terms"),
   $semicolon = $("#semicolon"),
-  distanceToAboutMe = $("#aboutMe").offset().top,
+  distanceToAboutMe = $("#aboutMe").offset().top -topMarginValue - 80,
   percentRotate = 100;
 
-  //rotator function for "drop-down terms"
+  //rotator function
   function rotate () {
     if (percentRotate > 0) {
       percentRotate -= 20;
@@ -40,12 +40,14 @@ $document.ready(function(){
   window.onresize = function (){
     if($name.css("position") !== "fixed") distanceToName = $name.offset().top - topMarginValue;
     if($contactDivs.css("position")!=="fixed") distanceToLinks = $contactDivs.offset().top - topMarginValue -10;
-    distanceToAboutMe = $("#aboutMe").offset().top,
+
+    distanceToAboutMe = $("#aboutMe").offset().top;
     shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
   }
 
   window.onscroll = function(event) {
     var currentDistance = window.pageYOffset;
+    console.log(currentDistance, distanceToAboutMe)
 
     if(currentDistance < distanceToName) {
       if ($name.attr("style")){
@@ -112,7 +114,7 @@ $document.ready(function(){
       $("#to-the-top").css({"transform": ""});
     }
 
-    if (currentDistance > 650 && currentDistance < distanceToAboutMe -200){
+    if (currentDistance > 650 && currentDistance < distanceToAboutMe -80){
       $("#appearing-container").animate({
         opacity: 1
       }, 2500)
@@ -122,7 +124,8 @@ $document.ready(function(){
         linkIsClear = true;
       }
     }
-    else if (linkIsClear && currentDistance > distanceToAboutMe-200 && currentDistance < $("#portfolio").offset().top -80){
+    else if (linkIsClear && currentDistance > distanceToAboutMe-100 && currentDistance < $("#portfolio").offset().top -80){
+      console.log('test');
       $contactLinks.css("background-color", "rgba(0,0,0,.8)")
       linkIsClear = false;
     } if (!linkIsClear && currentDistance > $("#portfolio").offset().top -80){
