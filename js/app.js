@@ -28,7 +28,7 @@ $document.ready(function(){
       $rotationTerms.css({"transform": "translateY(-"+percentRotate+"%)"})
     } else {
       $semicolon.removeClass('transparent');
-      clearInterval(rotatorInteveral)
+      clearInterval(rotatorInteveral);
     }
   }
 
@@ -124,7 +124,6 @@ $document.ready(function(){
       }
     }
     else if (linkIsClear && currentDistance > distanceToAboutMe-100 && currentDistance < $("#portfolio").offset().top -80){
-      console.log('test');
       $contactLinks.css("background-color", "rgba(0,0,0,.8)")
       linkIsClear = false;
     } if (!linkIsClear && currentDistance > $("#portfolio").offset().top -80){
