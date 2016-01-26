@@ -1,4 +1,22 @@
 @media (max-width: 680px) {
+  #technologies{
+    .first-stack {
+      img{
+        width: 100px;
+        margin: .5rem;
+      }
+    }
+    .second-stack{
+      margin-top: 1rem;
+      img{
+        width: 130px;
+      }
+      .small {
+        width: 75px;
+      }
+    }
+  }
+
   #intro>div>span {
     font-size: 4rem;
   }
@@ -27,6 +45,23 @@
 }
 
 @media (max-width: 510px) {
+  #technologies{
+    .first-stack {
+      img{
+        width: 85px;
+        margin: .5rem;
+      }
+    }
+    .second-stack{
+      margin-top: .5rem;
+      img{
+        width: 110px;
+      }
+      .small {
+        width: 50px;
+      }
+    }
+  }
   .navbar-image{
     width: 18px !important;
   }
