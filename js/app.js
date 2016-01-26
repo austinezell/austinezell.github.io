@@ -36,12 +36,12 @@ $document.ready(function(){
   var shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
 
 
-  // Check for changes in distances
+  // Check for changes in distance on screen resize
   window.onresize = function (){
     if($name.css("position") !== "fixed") distanceToName = $name.offset().top - topMarginValue;
     if($contactDivs.css("position")!=="fixed") distanceToLinks = $contactDivs.offset().top - topMarginValue -10;
 
-    distanceToAboutMe = $("#aboutMe").offset().top;
+    distanceToAboutMe = $("#aboutMe").offset().top -topMarginValue - 80;
     shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
   }
 
