@@ -47,7 +47,6 @@ $document.ready(function(){
 
   window.onscroll = function(event) {
     var currentDistance = window.pageYOffset;
-    console.log(currentDistance, distanceToAboutMe)
 
     if(currentDistance < distanceToName) {
       if ($name.attr("style")){
