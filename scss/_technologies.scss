@@ -2,29 +2,29 @@
   width: 100%;
   background-color: $blue;
   color: whitesmoke;
-  img {
-    display: inline-block;
-    width: 150px;
-    margin: 4px;
-    height: auto;
+  img{
     transition: all .4s ease;
     -o-transition: all .4s ease;
     -ms-transition: all .4s ease;
     -moz-transition: all .4s ease;
     -webkit-transition: all .4s ease;
-
-    filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
+  }
+  .first-stack{
+    img {
+      display: inline-block;
+      width: 325px;
+      margin: 2rem;
+    }
+    img.dark{
+      filter: brightness(125%);
+      -o-filter: brightness(125%);
+      -ms-filter: brightness(125%);
+      -moz-filter: brightness(125%);
+      -webkit-filter: brightness(125%);
+    }
   }
   img:hover {
-    filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
+    transform: scale(1.2);
   }
 }
 
