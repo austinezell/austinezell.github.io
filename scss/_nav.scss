@@ -16,11 +16,14 @@ nav.navbar {
     filter: invert(50%);
     -webkit-filter: invert(50%);
   }
-  ul.navbar-nav{
-    height: 100%;
+  ul.navbar-right{
+    padding-right: 15px;
     li {
       a {
         color: white;
+        transition: color .3s;
+        -webkit-transition: color .3s;
+        -moz-transition: color .3s;
       }
       a:hover {
         color: skyblue;

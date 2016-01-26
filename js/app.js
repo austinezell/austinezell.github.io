@@ -129,7 +129,6 @@ $document.ready(function(){
       $contactLinks.css("background-color", "")
       linkIsClear = true;
     }
-
   }
 
   $siteNavLinks.on("click", function(event){
