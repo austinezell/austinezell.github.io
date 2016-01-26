@@ -3,6 +3,11 @@
   background-color: $blue;
   color: whitesmoke;
   img{
+    filter: grayscale(75%);
+    -o-filter: grayscale(75%);
+    -ms-filter: grayscale(75%);
+    -moz-filter: grayscale(75%);
+    -webkit-filter: grayscale(75%);
     transition: all .4s ease;
     -o-transition: all .4s ease;
     -ms-transition: all .4s ease;
@@ -12,7 +17,7 @@
   .first-stack{
     img {
       display: inline-block;
-      width: 325px;
+      width: 285px;
       margin: 2rem;
     }
     img.dark{
@@ -24,6 +29,11 @@
     }
   }
   img:hover {
+    filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
     transform: scale(1.2);
   }
 }
