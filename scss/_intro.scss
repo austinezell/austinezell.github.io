@@ -81,30 +81,11 @@
   display: inline-block;
   vertical-align: top;
   overflow: hidden;
-}
-
-#name {
-  transition: transform .3s ease-out;
-  -webkit-transition: transform .3s ease-out;
-  -moz-transition: transform .3s ease-out;
-}
-
-#javascript {
-  transition: transform 1.5s ease-out;
-  -webkit-transition: transform 1.5s ease-out;
-  -moz-transition: transform 1.5s ease-out;
+  height: 4.2rem;
 }
 
 #semicolon {
   transition: all 1s ease-out;
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
-}
-
-.colored {
-  color:rgb(221, 144, 74);
-}
-
-#javascript.underlined {
-  border-bottom: 3px solid white;
 }
