@@ -12,6 +12,14 @@
   .row {
     margin: 0 auto;
   }
+  .row-centered {
+    text-align:center;
+  }
+  .col-centered {
+    display:inline-block;
+    float:none;
+    margin-right: -8px;
+  }
 
   .hover {
     background: rgba(0,0,0,0.8);
@@ -20,6 +28,7 @@
     margin-left: 15px;
     left: -15px;
     height: 100%;
+    width: 100%;
     z-index: 2;
     opacity: 0;
     -webkit-transition: opacity 500ms;
@@ -29,6 +38,7 @@
     .vertical-align{
       display: table;
       height: 100%;
+      width: 100%;
       span {
         display: table-cell;
         vertical-align: middle;
