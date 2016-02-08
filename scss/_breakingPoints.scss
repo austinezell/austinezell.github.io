@@ -2,17 +2,17 @@
   #technologies{
     .first-stack {
       img{
-        width: 220px;
+        width: 200px;
         margin: .75rem;
       }
     }
     .second-stack{
       margin-top: 1.5rem;
       img{
-        width: 260px;
+        width: 230px;
       }
       .small {
-        width: 135px;
+        width: 120px;
       }
     }
   }
@@ -26,21 +26,26 @@
     height: 4.1rem;
   }
   .contact-link-div>.contact-link img{
-    width: 30px;
+    width: 25px;
   }
   .contact-link-div>.contact-link{
     padding: 1.2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+
   }
   .circle-link-div>.circle-link img{
-    width: 30px;
+    width: 25px;
   }
   .circle-link-div>.circle-link{
     padding: 1.2rem;
-    padding-top: 1.9rem;
-    padding-bottom: 1.9rem;
+    padding-top: 1.65rem;
+    padding-bottom: 1.65rem;
   }
+  .title{
+    font-size: 4rem;
+  }
+
 }
 
 @media (max-width: 840px) {
@@ -54,10 +59,10 @@
     .second-stack{
       margin-top: 1.5rem;
       img{
-        width: 225px;
+        width: 200px;
       }
       .small {
-        width: 125px;
+        width: 110px;
       }
     }
   }

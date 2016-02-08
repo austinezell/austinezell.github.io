@@ -136,7 +136,7 @@ $document.ready(function(){
     event.preventDefault();
     var location  = $(this).attr("href");
     var offset = location === "#aboutMe" ? +topMarginValue + 80 : +topMarginValue
-    $('body, html').stop().animate({
+    $('body').stop().animate({
       scrollTop: $(location).offset().top - offset
     }, 1500, 'easeInCubic');
   })
