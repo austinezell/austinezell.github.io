@@ -3,7 +3,7 @@
 
 var $document = $(document)
 $document.ready(function(){
-  // $('#message').val('')
+  $('#message').val('')
   var $siteNavLinks = $(".site-nav-link"),
   $body = $("body"),
   topMargin = "54px",
