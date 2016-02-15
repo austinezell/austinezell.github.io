@@ -14,6 +14,8 @@ $document.ready(function(){
   $contactLinks =$(".contact-link"),
   $contactDivs = $(".contact-link-div"),
   linkIsClear = true,
+  $tech = $("#technologies"),
+  distanceToTech = $tech.offset().top - topMarginValue,
   distanceToName = $name.offset().top - topMarginValue,
   distanceToLinks = $contactDivs.offset().top - topMarginValue -10,
   $rotationTerms = $(".rotation-terms"),
@@ -38,34 +40,44 @@ $document.ready(function(){
 
   // Check for changes in distance on screen resize
   window.onresize = function (){
-    if($name.css("position") !== "fixed") distanceToName = $name.offset().top - topMarginValue;
-    if($contactDivs.css("position")!=="fixed") distanceToLinks = $contactDivs.offset().top - topMarginValue -10;
+    // set timeout to allow mediaqueries to catch up
+    setTimeout(function() {
+      if($name.css("position") !== "fixed") distanceToName = $name.offset().top - topMarginValue;
+      if($contactDivs.css("position")!=="fixed") distanceToLinks = $contactDivs.offset().top - topMarginValue -10;
 
-    distanceToAboutMe = $("#aboutMe").offset().top -topMarginValue - 80;
-    shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
+      distanceToTech = $tech.offset().top - topMarginValue;
+      distanceToAboutMe = $("#aboutMe").offset().top -topMarginValue - 80;
+      // Distance the links will shift
+      shiftDistance = (window.innerWidth/2) - (document.getElementById("email").offsetWidth) -10;
+    }, 800)
   }
 
   window.onscroll = function(event) {
     var currentDistance = window.pageYOffset;
 
     if(currentDistance < distanceToName) {
+      //reset name to unedited version
       if ($name.attr("style")){
         $name.attr('style', "")
       }
+
+      // calculate the amount of shift distance.
+      // these links will be at the side of the page when the name section locks into place.
       var shift = (currentDistance/distanceToName) * shiftDistance
       $email.css({
-        "transform": shift ? "translateX(-"+shift+"px)" : "",
-        "position": "relative",
-        "top": "0"
-      }).addClass("transitioning")
+        transform: shift ? "translateX(-"+shift+"px)" : "",
+        position: "relative",
+        top: "0"
+      }).addClass("transitioning");
       $resume.css({
-        "transform": shift ? "translateX("+shift+"px)" : "",
-        "position": "relative",
-        "top": "0"
-      }).addClass("transitioning")
-    }else if (currentDistance > distanceToName && currentDistance < 480){
+        transform: shift ? "translateX("+shift+"px)" : "",
+        position: "relative",
+        top: "0"
+      }).addClass("transitioning");
+    }else if (currentDistance > distanceToName && currentDistance < distanceToTech){
       if (!$name.attr("style")){
         var topOffset = document.getElementById("name").offsetHeight/2;
+        //locks name in place
         $name.css({
           "position": "fixed",
           "top": topMargin,
@@ -74,11 +86,15 @@ $document.ready(function(){
           "right": "0",
           "left": "0"
         });
+        //adds an offset to stop them from shifting when name is position fixed
         $contactDivs.css("top", topOffset);
       }
-      var newOpacity = 1 - (currentDistance - distanceToName)/270
+
+      // fades out name as page scrolls
+      var newOpacity = 1 - (currentDistance - distanceToName) / (distanceToTech/2);
       $name.css("opacity", newOpacity);
 
+      // locks the links in place at max distance
       if (currentDistance < distanceToLinks) {
         $email.css({
           "position": "relative",
@@ -93,6 +109,7 @@ $document.ready(function(){
       }
     }
     if (currentDistance >= distanceToLinks) {
+      //locks the links in position fixed and removes transitioning so they don't animate their position fixed
       $email.css({
         "position": "fixed",
         "left": "0",
@@ -107,16 +124,19 @@ $document.ready(function(){
       }).removeClass("transitioning");
     }
 
-    if (currentDistance > 650){
+    if (currentDistance > distanceToTech){
+      //brings in navigation link
       $("#to-the-top").css({"transform": "translateY(0)"});
     } else {
       $("#to-the-top").css({"transform": ""});
     }
 
-    if (currentDistance > 650 && currentDistance < distanceToAboutMe -80){
+    if (currentDistance > distanceToTech && currentDistance < distanceToAboutMe -80){
+      //animates about me secition into site
       $("#appearing-container").animate({
         opacity: 1
-      }, 2500)
+      }, 2500);
+      //final check to make sure name is properly faded out
       $name.css("opacity", 0);
       if (!linkIsClear){
         $contactLinks.css("background-color", "")
@@ -124,6 +144,7 @@ $document.ready(function(){
       }
     }
     else if (linkIsClear && currentDistance > distanceToAboutMe-100 && currentDistance < $("#portfolio").offset().top -80){
+      // changes background color of whie links on a white background
       $contactLinks.css("background-color", "rgba(0,0,0,.8)")
       linkIsClear = false;
     } if (!linkIsClear && currentDistance > $("#portfolio").offset().top -80){
