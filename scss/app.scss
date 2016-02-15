@@ -47,10 +47,16 @@ section{
   margin-top: .6em;
   margin-bottom: .6em;
 }
-
+section {
+  position: relative;
+}
 
 #resumeModal .modal-body{
   height: 85vh;
+  max-height: 900px;
+}
+#resumeModal .modal-content{
+  min-width: 30vw;
 }
 
 .modal-content{
@@ -112,8 +118,6 @@ section{
   text-align: center;
 }
 
-
-
 .circle-link-div{
   position: fixed;
   bottom: 10vh;
@@ -144,46 +148,6 @@ section{
     -moz-filter: invert(100%);
     filter: invert(100%);
   }
-}
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes slideIn {
-  from {
-    transform: translate(100%, 0, 0);
-    -webkit-transform: translate(100%, 0, 0);
-    -moz-transform: translate(100%, 0, 0);
-  }
-  to {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-}
-
-@-webkit-keyframes slideOut {
-  from {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-  }
-  to {
-    transform: translate(100%, 0, 0);
-    -webkit-transform: translate(100%, 0, 0);
-    -moz-transform: translate(100%, 0, 0);
-  }
-}
-
-.slideIn {
-  -webkit-animation-name: slideIn;
-  animation-name: slideIn;
 }
 
 @import "./_materializeCard",

@@ -26,6 +26,7 @@
   -webkit-transition: transform .5s ease-out;
 }
 .contact-link-div{
+  z-index: 5;
   display: inline-block;
   .contact-link{
     font-size: 2rem;

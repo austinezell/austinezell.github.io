@@ -163,8 +163,8 @@ $document.ready(function(){
     event.preventDefault();
     var location  = $(this).attr("href");
     var offset = location === "#aboutMe" ? +topMarginValue + 80 : +topMarginValue
-    $('body').stop().animate({
-      scrollTop: $(location).offset().top - offset
+    $('body, html').stop().animate({
+      "scroll-top": $(location).offset().top - offset
     }, 1500, 'easeInCubic');
   })
 
