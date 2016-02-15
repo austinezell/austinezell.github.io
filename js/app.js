@@ -132,6 +132,12 @@ $document.ready(function(){
     }
   }
 
+  // $("#messageMe").on("submit", function(event, data){
+  //   event.preventDefault();
+  //   var obj = {}
+  //   // $.post("https://getsimpleform.com/messages?form_api_token=02f9ef3aab61a87489bb782f0a16905d")
+  // })
+  //
   $siteNavLinks.on("click", function(event){
     event.preventDefault();
     var location  = $(this).attr("href");
