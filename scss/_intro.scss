@@ -3,7 +3,7 @@
   min-height: 650px;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2 );
-  padding: 0px;
+  padding: 0;
   white-space: nowrap;
   >div {
     width: 100%;
@@ -20,64 +20,58 @@
     }
   }
 }
-.contact-link-div.transitioning{
-  transition: transform .2s ease-out;
-  -moz-transition: transform .2s ease-out;
-  -webkit-transition: transform .2s ease-out;
+.contact-link-div.transitioning {
+  transition: transform 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out;
+  -webkit-transition: transform 0.2s ease-out;
 }
-.contact-link-div{
+.contact-link-div {
   z-index: 5;
   display: inline-block;
-  .contact-link{
+  .contact-link {
     font-size: 2rem;
-    padding: 2rem;
-    padding-top: 2.8rem;
-    padding-bottom: 2.8rem;
+    padding: 2.8rem 2rem;
     border: 5px solid white;
     border-radius: 50%;
-    transition: all .5s ease-out;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    img{
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    img {
       width: 40px;
-      filter: invert(100%);
+      filter:invert(100%);
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
-      transition: filter .5s ease-out;
-      -moz-transition: filter .5s ease-out;
-      -webkit-transition: filter .5s ease-out;
+      transition: filter 0.5s ease-out;
+      -moz-transition: filter 0.5s ease-out;
+      -webkit-transition: filter 0.5s ease-out;
     }
   }
-  .contact-link:hover{
+  .contact-link:hover {
     background-color: white !important;
     border-color: black;
   }
   .contact-link:hover img {
-    filter: invert(0);
+    filter:invert(0);
     -webkit-filter: invert(0%);
   }
 }
-
 .transparent {
   color: rgba(0,0,0,0);
 }
-
 #rotation-row {
   font-size: 3.4rem;
   height: 5.2rem;
 }
-
 .rotation-terms {
-  -webkit-transition: transform .2s cubic-bezier(.5, 1, .5, 1);
-  transition: transform .2s cubic-bezier(.5, 1, .5, 1);
+  -webkit-transition: transform 0.2s cubic-bezier(.5, 1, .5, 1);
+  transition: transform 0.2s cubic-bezier(.5, 1, .5, 1);
   -webkit-transition-timing-function: cubic-bezier(.5, 1, .5, 1);
   transition-timing-function: cubic-bezier(.5, 1, .5, 1);
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   transform: translateY(-100%);
 }
-
 #rotator {
   text-align: center;
   display: inline-block;
@@ -85,7 +79,6 @@
   overflow: hidden;
   height: 4.2rem;
 }
-
 #semicolon {
   transition: all 1s ease-out;
   -webkit-transition: all 1s ease-out;
