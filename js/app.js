@@ -54,7 +54,8 @@ $document.ready(function(){
 
   window.onscroll = function(event) {
     var currentDistance = window.pageYOffset;
-
+    console.log(currentDistance);
+    console.log(distanceToName);
     if(currentDistance < distanceToName) {
       //reset name to unedited version
       if ($name.attr("style")){
