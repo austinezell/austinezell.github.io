@@ -115,6 +115,10 @@
 }
 
 @media (max-width: 510px) {
+  body{
+    background: url("../images/backgroundTest3.jpg") center top;
+    background-attachment: fixed;
+  }
   #technologies{
     .first-stack {
       img{
@@ -142,23 +146,27 @@
       padding-right: 8px !important;
     }
   }
-  .contact-link-div>.contact-link img{
-    width: 20px;
-  }
+  // .contact-link-div>.contact-link img{
+  //   width: 20px;
+  // }
   .circle-link-div>.circle-link img{
     width: 20px;
   }
-  .contact-link-div>.contact-link{
-    padding-right: .9rem;
-    padding: .5rem;
-    border-width: 3px;
-    padding-left: .9rem;
-  }
+  // .contact-link-div>.contact-link{
+  //   padding-right: .9rem;
+  //   padding: .5rem;
+  //   border-width: 3px;
+  //   padding-left: .9rem;
+  // }
   .circle-link-div .circle-link{
     padding-top: .9rem;
     padding: .5rem;
     border-width: 4px;
-    padding-bottom: .9rem;  }
+    padding-bottom: .9rem;
+  }
+  .contact-link-div {
+    display: none;
+  }
     .title {
       font-size: 3rem;
     }

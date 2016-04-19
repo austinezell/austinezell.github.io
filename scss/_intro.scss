@@ -22,8 +22,6 @@
 }
 .contact-link-div.transitioning {
   transition: transform 0.2s ease-out;
-  -moz-transition: transform 0.2s ease-out;
-  -webkit-transition: transform 0.2s ease-out;
 }
 .contact-link-div {
   z-index: 5;
@@ -34,16 +32,10 @@
     border: 5px solid white;
     border-radius: 50%;
     transition: all 0.5s ease-out;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
     img {
       width: 40px;
       filter:invert(100%);
-      -webkit-filter: invert(100%);
-      -moz-filter: invert(100%);
       transition: filter 0.5s ease-out;
-      -moz-transition: filter 0.5s ease-out;
-      -webkit-transition: filter 0.5s ease-out;
     }
   }
   .contact-link:hover {
@@ -63,9 +55,7 @@
   height: 5.2rem;
 }
 .rotation-terms {
-  -webkit-transition: transform 0.2s cubic-bezier(.5, 1, .5, 1);
   transition: transform 0.2s cubic-bezier(.5, 1, .5, 1);
-  -webkit-transition-timing-function: cubic-bezier(.5, 1, .5, 1);
   transition-timing-function: cubic-bezier(.5, 1, .5, 1);
   margin: 0;
   padding: 0;
@@ -81,6 +71,4 @@
 }
 #semicolon {
   transition: all 1s ease-out;
-  -webkit-transition: all 1s ease-out;
-  -moz-transition: all 1s ease-out;
 }
