@@ -119,6 +119,9 @@
     background: url("../images/backgroundTest3.jpg") center top;
     background-attachment: fixed;
   }
+  #intro {
+    min-height: 0;
+  }
   #technologies{
     .first-stack {
       img{
@@ -146,18 +149,9 @@
       padding-right: 8px !important;
     }
   }
-  // .contact-link-div>.contact-link img{
-  //   width: 20px;
-  // }
   .circle-link-div>.circle-link img{
     width: 20px;
   }
-  // .contact-link-div>.contact-link{
-  //   padding-right: .9rem;
-  //   padding: .5rem;
-  //   border-width: 3px;
-  //   padding-left: .9rem;
-  // }
   .circle-link-div .circle-link{
     padding-top: .9rem;
     padding: .5rem;
