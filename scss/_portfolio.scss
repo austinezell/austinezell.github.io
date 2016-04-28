@@ -32,10 +32,12 @@
     width: 100%;
     z-index: 2;
     opacity: 0;
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
-    transition: opacity 500ms;
+    box-shadow:
+    5px 5px 10px rgba(white, .4),
+    -5px 5px 10px rgba(white, .4),
+    -5px -5px 10px rgba(white, .4),
+    5px -5px 10px rgba(white, .4);
+    transition: all 500ms;
     .vertical-align{
       display: table;
       height: 100%;

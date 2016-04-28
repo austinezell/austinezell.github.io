@@ -4,40 +4,22 @@
   color: whitesmoke;
   img{
     filter: grayscale(75%);
-    -o-filter: grayscale(75%);
-    -ms-filter: grayscale(75%);
-    -moz-filter: grayscale(75%);
-    -webkit-filter: grayscale(75%);
     transition: all .4s ease;
-    -o-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -webkit-transition: all .4s ease;
   }
   .first-stack{
     img {
       display: inline-block;
       width: 285px;
       margin: 2rem;
+      &.dark{
+        filter: brightness(125%);
+      }
     }
-    img.dark{
-      filter: brightness(125%);
-      -o-filter: brightness(125%);
-      -ms-filter: brightness(125%);
-      -moz-filter: brightness(125%);
-      -webkit-filter: brightness(125%);
+    img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.2);
     }
   }
-  img:hover {
-    filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2); 
-    transform: scale(1.2);  }
 }
 
 #tech-triangle-container {
@@ -54,8 +36,6 @@
     border-right: 150px solid $blue;
   }
   .side {
-    width: -moz-calc(50% - 150px);
-    width: -webkit-calc(50% - 150px);
     width: calc(50% - 150px);
     background-color: $blue;
     height: 100%;
