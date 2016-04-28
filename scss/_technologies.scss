@@ -11,15 +11,17 @@
       display: inline-block;
       width: 285px;
       margin: 2rem;
-      &.dark{
-        filter: brightness(125%);
+    }
+    img.dark{
+      filter: brightness(125%);
+      &:hover{
+
       }
     }
-    img:hover {
-      filter: grayscale(0%);
-      transform: scale(1.2);
-    }
   }
+  img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2);  }
 }
 
 #tech-triangle-container {
@@ -36,6 +38,8 @@
     border-right: 150px solid $blue;
   }
   .side {
+    width: -moz-calc(50% - 150px);
+    width: -webkit-calc(50% - 150px);
     width: calc(50% - 150px);
     background-color: $blue;
     height: 100%;
