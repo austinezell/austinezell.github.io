@@ -3,25 +3,25 @@
 
 var $document = $(document)
 $document.ready(function(){
-  $('#message').val('')
-  var $siteNavLinks = $(".site-nav-link"),
-  $body = $("body"),
-  topMargin = "54px",
-  topMarginValue= 54,
-  $name = $("#name"),
-  $email = $("#email"),
-  $resume = $("#resume"),
-  $contactLinks =$(".contact-link"),
-  $contactDivs = $(".contact-link-div"),
-  linkIsClear = true,
-  $tech = $("#technologies"),
-  distanceToTech = $tech.offset().top - topMarginValue,
-  distanceToName = $name.offset().top - topMarginValue,
-  distanceToLinks = $contactDivs.offset().top - topMarginValue -10,
-  $rotationTerms = $(".rotation-terms"),
-  $semicolon = $("#semicolon"),
-  distanceToAboutMe = $("#aboutMe").offset().top -topMarginValue - 80,
-  percentRotate = 100;
+  $('#message').val('');
+  const $siteNavLinks = $(".site-nav-link");
+  const $body = $("body");
+  const topMargin = "54px";
+  const topMarginValue= 54;
+  const $name = $("#name");
+  const $email = $("#email");
+  const $resume = $("#resume");
+  const $contactLinks =$(".contact-link");
+  const $contactDivs = $(".contact-link-div");
+  let linkIsClear = true;
+  const $tech = $("#technologies");
+  let distanceToTech = $tech.offset().top - topMarginValue;
+  let distanceToName = $name.offset().top - topMarginValue;
+  let distanceToLinks = $contactDivs.offset().top - topMarginValue -10;
+  const $rotationTerms = $(".rotation-terms");
+  const $semicolon = $("#semicolon");
+  let distanceToAboutMe = $("#aboutMe").offset().top -topMarginValue - 80;
+  let percentRotate = 100;
 
   //rotator function
   function rotate () {
