@@ -128,8 +128,8 @@ section {
     padding: 2rem;
     padding-top: 2.8rem;
     padding-bottom: 2.8rem;
-    box-shadow: 0 2px 3px grey;
-    border: 5px solid black;
+    box-shadow: 0 3px 15px black;
+    border: 5px solid lighten(black, 15);
     border-radius: 50%;
     transition: all .5s ease-out;
     -webkit-transition: all .5s ease-out;
