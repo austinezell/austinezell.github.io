@@ -1,12 +1,14 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "devDependencies": {
+  "scripts": {
+    "start": "./node_modules/.bin/gulp watch"
   },
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.6",
-    "gulp-sass": "^2.2.0"
+    "gulp-sass": "^2.2.0",
+    "prettier": "^1.16.4"
   }
 }

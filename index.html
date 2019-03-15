@@ -11,14 +11,13 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:500' rel='stylesheet' type='text/css'>
   <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA4+TNAKqqhQDTzrkA09atANTSswC/u6UAw8CZAK2uiAD39/MAsqyLAPv+7QD8/PAAs7l8AMjJmQC5toUA4ODCAJCIewCso3oA5OPCALm1rwC7uakA9/H0AK6xgADl3uAA1tC3ANfUsQDX1bQA5uHgALOxgADU0sYAxsWgANvUugDHwrsA0MugAOPbvQC5vZIApaWKAOTqtADTzrIA1dSyAOvjzACzqIoAtLB+ANvOuwD8+fsAubSKAO/t4QC6vo0A5ODEAOLc0wCoqYUA9PHtAOHmzQDo3tAArrB/ANTUswDU07kA693WAPrz8wCBfXgA1tG8ANjTuQD9/PMAtrOIAMnCtADi38IA3dvaANXOtADT0rcAqqiVAOrd1wDs7sIAsLKGANjVtwC2rIYA19LJAOfs6QDs6+YAt7SVALiymADj2s8A0M6sAOTizADV06kAsKx+APT48gDW1KwA1dG1ANbRtQCxtX4A2tS1ANnTuwCgmIIAr6euALeykADt7OEA7+3kALm5kwDe3soA4uK7AKaniwDX0rAArrR8APv29gD79/kAs7V/APz59gC2sYUAt6+IAOvq3ACMgX4A2tXUAN7czgDf3ssA4+W8AKmmgADg384A0s2rAOLhywD38O4Aq6yJAMO7owD4+e4A5ejXAP755QCzsIMAtKyJAOrr1wC1sokA3tm0AOzo4ADf18kA4dy9AKSdigDw7OwA497DAPLw5gDy8ekA8u3vAOLczwCqoocA4eLPAOPg0gDV0bgA+Pj1ANfUuAD88/gA+fv1ALSygQD6+/UAtrR+APDq1QDg27sAu7WKAO3u6gD08N4A4OPKANPRpwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATF8SSyuXbI2EAAAAAAAAAHkOngqZT1w9DyUAAAAAAAAUTnt8DGALNYIuUAAAAAAAQ5SWa2gWLWlhhXoAAAAAAIuTeH0fYpw7VoBuADQcGHEkMDeVImYbOImRm15lJkiYOkcpVZogAzlZCU08RheIUXedclJUWxookD8AAI5CamSPU4wxBxmSRVgvAABwNixASQEyE1p2JwVKHgAAh2cdfyN1YxCGXVdEBgAAAACDMw1+PnMIbxEEQQAAAAAAAAAhdG0qgQIVigAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD4AwAA+AEAAPgAAAD4AAAA+AAAAIAAAAAAAAAAAAEAAIABAACAAQAAgAMAAMAHAADwDwAA//8AAP//AAA=" rel="icon" type="image/x-icon" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="./js/app.js"></script>
 </head>
 
-<body>
+<body id="body">
 
-  <nav id="myNavBar" class="navbar navbar-inverse navbar-fixed-top">
+  <nav id="myNavBar" class="navbar navbar-inverse">
     <ul class="nav navbar-nav">
       <li>
         <a target="_blank" href="https://github.com/austinezell">
@@ -44,12 +43,11 @@
           Austin Reed Ezell
           <div id="rotation-row">
             <span id="rotator">
-              <ul class="rotation-terms">
+              <ul class="rotation-terms" id="rotation-terms">
                 <li id="javascript" class="rotation-term">JavaScript</li>
                 <li class="rotation-term">Frontend</li>
                 <li class="rotation-term">Node</li>
                 <li class="rotation-term">Backend</li>
-                <li class="rotation-term">PLACEHOLDER</li>
               </ul>
             </span> Developer<span id="semicolon" class="transparent">;</span>
           </div>
@@ -122,7 +120,7 @@
   </section>
 
   <div class="circle-link-div" id="to-the-top">
-    <a href="#intro" title="Back to the top" class="circle-link site-nav-link">
+    <a href="#body" title="Back to the top" class="circle-link site-nav-link">
       <img src="./images/up.png" alt=""/>
     </a>
   </div>
